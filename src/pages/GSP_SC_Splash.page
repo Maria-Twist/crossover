@@ -1,0 +1,151 @@
+<!-- 
+/* Copyright (C) Gary Smith Partnership - All Rights Reserved
+ * Unauthorized copying of this file, via any medium is strictly prohibited
+ * Proprietary and confidential
+ * Written by Gary Smith Partnership <gary@garysmithpartnership.com>, June, 2020
+ */
+ -->
+<apex:page controller="GSP_SC_ctrSplash" lightningStylesheets="true">
+<style type="text/css">
+	LI { padding: 3px 0 3px 0 }
+</style>
+<apex:form >
+	<apex:pageMessages ></apex:pageMessages>
+	<apex:pageBlock title="">
+		<p>
+			<h2 style="font-size:14px;">Here are the simple steps for setting up the app. See the video links at the bottom of this page for detailed guidance on the following steps:</h2>
+			<ol>
+				<li style="margin-bottom:15px;">
+					Edit the Opportunity Page layout.
+					<ul style="list-style-type:none;">
+
+						<li style="margin-top:15px;">
+							Add these two fields to the page layout:<br/>
+							- # Revenue Schedules<br/>
+							- Total Scheduled Revenue
+						</li>
+
+						<li style="margin-top:15px;">
+							If you are using the Classic interface, add these two custom buttons to the page:<br/>
+							- Edit Line Item Schedules<br/>
+							- Mass Edit Line Item Schedules
+						</li>
+
+						<li style="margin-top:15px;">
+							If using the Lightning Interface, add these two Lightning Actions:<br/>
+							- Edit Line Item Schedules<br/>
+							- Mass Edit Line Item Schedules<br/>
+						</li>
+
+						<li style="margin-top:15px;">
+							In both interfaces, add the Revenue Schedules Related List.
+						</li>
+					</ul>
+				</li>
+
+				<li style="margin-bottom:15px;">
+					Edit the Opportunity Product Page Layout.<br/>
+					You'll find the Opportunity Product section further down the Opportunity section in Setup. Do the following:
+					<ul style="list-style-type:none;">
+
+						<li style="margin-top:15px;">
+							Edit the page layout and add these fields:<br/>
+							- # Revenue Months<br/>
+							- Revenue Projection Method<br/>
+							- Revenue Start Date.
+						</li>
+					</ul>
+				</li>
+
+				<li style="margin-bottom:15px;">
+					Edit the Opportunity Product Multi Line Layout. You’ll find the link for this at the top of the Opportunity Product page layout.<br/>
+					<img src="{!URLFOR($Resource.GSP_SC_splash)}"/>
+					<ul style="list-style-type:none;">
+						<li style="margin-top:15px;">
+							Move these two fields from the left to the right column and Save.<br/>
+							- Revenue Start Date<br/>
+							- # Revenue Months.
+						</li>
+					</ul>
+				</li>
+
+			</ol>	
+		</p>
+		<hr style="border-top: 1px solid #ccc;"/>
+		<p>
+			<h2 style="font-size:14px;">Helpful resources</h2>
+		</p>
+		<p style="font-weight:bold;">
+			These two videos walk you step-by-step through the above set up process:
+		</p>
+		<p>
+			Setup GSP Custom Schedules in Classic<br/>
+			youtube link
+		</p>
+		<p>
+			Setup GSP Custom Schedules in Lightning<br/>
+			youtube link.
+		</p>
+		<p style="font-weight:bold;">
+			The following videos demonstrate how to set up the optional features of the app:
+		</p>
+		<p>
+			Using Targets in the GSP Custom Schedule app<br/>
+			youtube link.
+		</p>
+		<p>
+			Using S-curve Revenue Schedules in the GSP Custom Schedule app.<br/>
+			youtube link.
+		</p>
+		<hr style="border-top: 1px solid #ccc;"/>
+		<p>
+			<h2 style="font-size:14px;">Getting in touch</h2>
+		</p>
+		<p>
+			If you need help setting up the app, or want to talk about further adapting it to meet your specific needs, simply get in touch:<br/><br/>
+			Web <a href="https://garysmithpartnership.com/contact-us/" target="_BLANK">https://garysmithpartnership.com/contact-us/</a><br/><br/>
+			Phone: +44 203 280 3665
+		</p>
+	</apex:pageBlock>
+	<apex:pageBlock title="Schedule Settings">
+		<apex:outputPanel >
+			<p>
+				I want Schedules created every&nbsp;<apex:inputText value="{!interval}" style="width:30px;"/>&nbsp;
+				<apex:selectList size="1" value="{!intervalFrequency}">
+					<apex:selectOptions value="{!intervalFrequencyList}"/>
+				</apex:selectList>
+			</p>
+			<p>
+				I don't want Opportunity Close Date changes to affect Revenue Schedule Dates:&nbsp;<apex:inputCheckbox value="{!bDisableCloseDateChanges}"/>
+			</p>
+			<p>
+				<apex:commandButton value=" Save Setting " action="{!ChangeFrequency}"/>
+			</p>
+			You can modify this manually on the <a href="/setup/ui/viewCustomSettings.apexp?setupid=CustomSettings&id=01I5A000002i1Gn">Custom Settings</a> page
+		</apex:outputPanel>
+	</apex:pageBlock>
+	<apex:pageBlock title="Setup">
+			<apex:outputPanel >
+				<apex:commandButton value="Create S-Curve Template" action="{!LoadScurveData}"/>
+			</apex:outputPanel>
+	</apex:pageBlock>
+	<apex:pageBlock title="salesforce Schedules" rendered="{!bHasDefaultSchedules}">
+		<p>
+			The app can optionally concert standard salesforce Schedules into Custom Schedules.<br/>
+			You can monitor this on the '<a href="/apexpages/setup/listAsyncApexJobs.apexp" target="_BLANK">Apex Jobs</a>' page.
+		</p>
+		<p style="margin-bottom:10px;">
+			<apex:inputCheckbox value="{!bConfirm}" id="confirmCheck" required="true"/>
+			<apex:outputLabel style="color:red"
+				for="confirmCheck"
+				value="I understand that this will replace all salesforce Schedules with Custom Schedules and remove any salesforce Schedules."/>
+			
+		</p>
+		<apex:outputLabel for="projectionList" value="Projection: "/>
+		<apex:selectList size="1" value="{!projectionType}" id="projectionList">
+			<apex:selectOptions value="{!projectionTypes}"/>
+		</apex:selectList>
+			<apex:commandButton value="Convert Schedules" action="{!ConvertSalesforceSchedules}" style="margin-left:50px" disabled="{!bIsExecuting}"/>
+	</apex:pageBlock>
+</apex:form>
+</apex:page>

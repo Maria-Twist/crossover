@@ -1,0 +1,65 @@
+<!-- 
+/* Copyright (C) Gary Smith Partnership - All Rights Reserved
+ * Unauthorized copying of this file, via any medium is strictly prohibited
+ * Proprietary and confidential
+ * Written by Gary Smith Partnership <gary@garysmithpartnership.com>, June, 2020
+ */
+ -->
+<apex:page standardController="Opportunity" extensions="GSP_SC_ctrScheduleEdit" lightningStylesheets="true">
+<apex:form >
+	<apex:outputPanel id="pageMessageId">
+			<apex:outputPanel rendered="{!bValid}">
+				<script type="text/javascript">
+					if ((typeof sforce != 'undefined') && sforce && (!!sforce.one))
+					{
+						sforce.one.back(true);
+					}
+					else
+					{
+						window.location.href='/{!opportunity.Id}';
+					}
+				</script>
+			</apex:outputPanel>
+			<apex:pageMessages escape="false" id="page_messages"/>
+		</apex:outputPanel>
+	<apex:pageBlock title="Product Line Items">
+		<apex:pageBlockButtons >
+			<apex:commandButton action="{!SaveLineItems}" value=" Save " rendered="{!bIsValid}" rerender="pageMessageId"/>
+			<apex:commandButton action="{!Cancel}" value=" Cancel "/>
+		</apex:pageBlockButtons>
+		<input type="text" style="position:absolute;left:-1000px;width:0px;height:0px;"/>
+		<apex:pageBlockTable value="{!opportunityLineItems}"
+			var="opportunityLineItem"
+			style="width:100%"
+			rendered="{!(opportunityLineItems!=null && opportunityLineItems.size > 0) && bIsValid}">
+			
+			<apex:repeat value="{!dynamicFields}" var="field"  rendered="{!hasDynamicFields}">
+				<apex:column headerValue="{!$ObjectType.OpportunityLineItem.fields[field].Label}">
+					<apex:inputField value="{!opportunityLineItem[field]}"
+						rendered="{!!fieldSetMap[field].bReadOnly}"
+						required="{!fieldSetMap[field].bMandatory}"/>
+									
+					<apex:outputField value="{!opportunityLineItem[field]}"
+						rendered="{!fieldSetMap[field].bReadOnly}"/>
+				</apex:column>
+			</apex:repeat>
+			
+			<apex:column headerValue="{!$ObjectType.OpportunityLineItem.fields.Name.Label}" rendered="{!!hasDynamicFields}">
+				<apex:outputLink value="/{!opportunityLineItem.Id}" target="_blank">
+					<apex:outputText value="{!opportunityLineItem.Name}"/>
+				</apex:outputLink>
+			</apex:column>
+			<apex:column headerValue="{!$ObjectType.OpportunityLineItem.fields.Revenue_Start_Date__c.Label}" rendered="{!!hasDynamicFields}">
+				<apex:inputField value="{!opportunityLineItem.Revenue_Start_Date__c}"/>
+			</apex:column>
+			<apex:column headerValue="{!$ObjectType.OpportunityLineItem.fields.Revenue_Projection_Method__c.Label}" rendered="{!bShowProjection&&!hasDynamicFields}">
+				<apex:inputField value="{!opportunityLineItem.Revenue_Projection_Method__c}"/>
+			</apex:column>
+			<apex:column headerValue="{!$ObjectType.OpportunityLineItem.fields.Revenue_Months__c.Label}" rendered="{!!hasDynamicFields}">
+				<apex:inputField value="{!opportunityLineItem.Revenue_Months__c}" style="width:40px;"/>
+				
+			</apex:column>
+		</apex:pageBlockTable>
+	</apex:pageBlock>
+</apex:form>
+</apex:page>

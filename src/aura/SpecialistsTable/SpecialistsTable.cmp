@@ -1,0 +1,383 @@
+<!--
+ - Created by Pavel Kovalevsky on 11/12/2020.
+ -->
+<aura:component implements="force:hasRecordId,force:lightningQuickActionWithoutHeader" controller="SpecialistsTableController">
+    <aura:attribute name="recordId" type="Id" access="public" />
+    <aura:attribute name="areAllChecked" type="Boolean" default="true" />
+    <aura:attribute name="lastSelectedIDs" type="List" default="[]" />
+    <aura:attribute name="arrowDirection" type="string" default="arrowup" />
+    <aura:attribute name="selectedTabsoft" type="string" default="specialistName" />
+    <aura:attribute name="specialists" type="Object[]"/>
+    <aura:attribute name="zip" type="string" />
+    <aura:attribute name="city" type="string" />
+    <aura:attribute name="specialities" type="string" />
+    <aura:attribute name="selectedRow" type="Id"/>
+    <aura:attribute name="selectedGroupId" type="Id"/>
+    <aura:attribute name="selectedCost" type="Decimal"/>
+    <aura:attribute name="selectedQuantity" type="Decimal"/>
+    <aura:attribute name="selectedInternal" type="Decimal"/>
+    <aura:attribute name="selectedProvider" type="Decimal"/>
+    <aura:attribute name="isAccessible" type="Boolean"/>
+    <aura:attribute name="showSpinner" type="Boolean" default="false"/>
+
+    <aura:handler name="init" value="{!this }" action="{!c.init }" />
+
+    <aura:html tag="style">
+        .slds-modal__container {
+        min-width: 90vw;
+        }
+    </aura:html>
+<!--    <aura:renderIf isTrue="{!v.showSpinner}">-->
+<!--        <lightning:spinner variant="brand" size="large" aura:id="mySpinner" alternativeText="Loading"/>-->
+<!--    </aura:renderIf>-->
+    <aura:if isTrue="{!v.isAccessible}">
+        <div class="header-title" style="text-align: center; height: 60px; padding-top: 14px; border-bottom: 2px solid #efefef; font-size: 22px;">Select a Specialist</div>
+        <br/>
+        <br/>
+        <div class="slds-align_absolute-center slds-grid slds-wrap">
+            <div class="slds-size_1-of-4 slds-col slds-p-right_small slds-wrap slds-m-bottom_small">
+                <lightning:input value="{!v.zip}" label="Zip" maxlength="60"/>
+            </div>
+            <div class="slds-size_1-of-4 slds-col slds-p-horizontal_small slds-wrap slds-m-bottom_small">
+                <lightning:input value="{!v.city}" label="City" maxlength="60"/>
+            </div>
+            <div class="slds-size_1-of-4 slds-col slds-p-horizontal_small slds-wrap slds-m-bottom_small">
+                <lightning:input value="{!v.specialities}" label="Speciality(ies)" maxlength="60"/>
+            </div>
+            <div class="slds-size_1-of-4 slds-col slds-p-left_small slds-wrap slds-m-bottom_small" style="margin-top: 21px;">
+                <lightning:button variant="neutral" label="Search" onclick="{!c.searchRecords}"/>
+            </div>
+            <div class="exampleHolder">
+                <aura:if isTrue="{! v.showSpinner }">
+                        <lightning:spinner alternativeText="Loading" />
+                </aura:if>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <div style="padding-top: 0">
+            <div style="height: 320px; overflow: scroll; position: relative;">
+                <table class="slds-table table-layout: fixed" style="width: 100%; position: relative; border-collapse: separate;">
+                    <thead>
+                        <tr class="slds-text-title_caps">
+                            <th class="headcol" scope="col">
+                                    <div class="slds-th__action slds-text-link--reset" >
+                                        <lightning:icon iconName="utility:identity" size="xx-small"/>
+                                    </div>
+                            </th>
+                            <th class="headcol2" scope="col" onclick="{!c.sortBySpecialist}">
+                                <div>
+                                    <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+                                        <div class="field-label" title="Specialist Name">Specialist Name</div>
+                                        <aura:if isTrue="{! and(v.arrowDirection == 'arrowdown', v.selectedTabsoft == 'specialistName') }">
+                                            <button class="slds-button arrow-button">
+                                                <lightning:icon class="icn" iconName="utility:arrowup" size="xx-small" />
+                                            </button>
+                                        </aura:if>
+                                        <aura:if isTrue="{! and(v.arrowDirection != 'arrowdown', v.selectedTabsoft == 'specialistName') }">
+                                            <button class="slds-button arrow-button">
+                                                <lightning:icon class="icn" iconName="utility:arrowdown" size="xx-small" />
+                                            </button>
+                                        </aura:if>
+                                    </a>
+                                </div>
+                            </th>
+                            <th scope="col" onclick="{!c.sortByGroup}">
+                                <div>
+                                    <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+                                        <div class="field-label" title="Group">Group</div>
+                                        <aura:if isTrue="{! and(v.arrowDirection == 'arrowdown', v.selectedTabsoft == 'groupName') }">
+                                            <button class="slds-button arrow-button">
+                                                <lightning:icon class="icn" iconName="utility:arrowup" size="xx-small" />
+                                            </button>
+                                        </aura:if>
+                                        <aura:if isTrue="{! and(v.arrowDirection != 'arrowdown', v.selectedTabsoft == 'groupName') }">
+                                            <button class="slds-button arrow-button">
+                                                <lightning:icon class="icn" iconName="utility:arrowdown" size="xx-small" />
+                                            </button>
+                                        </aura:if>
+                                    </a>
+                                </div>
+                            </th>
+                            <th scope="col" onclick="{!c.sortByPrimary}">
+                                <div>
+                                    <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+                                        <div class="field-label" title="Primary Specialty">Primary Specialty</div>
+                                        <aura:if isTrue="{! and(v.arrowDirection == 'arrowdown', v.selectedTabsoft == 'primarySpec') }">
+                                            <button class="slds-button arrow-button">
+                                                <lightning:icon class="icn" iconName="utility:arrowup" size="xx-small" />
+                                            </button>
+                                        </aura:if>
+                                        <aura:if isTrue="{! and(v.arrowDirection != 'arrowdown', v.selectedTabsoft == 'primarySpec') }">
+                                            <button class="slds-button arrow-button">
+                                                <lightning:icon class="icn" iconName="utility:arrowdown" size="xx-small" />
+                                            </button>
+                                        </aura:if>
+                                    </a>
+                                </div>
+                            </th>
+                            <th scope="col" onclick="{!c.sortByOther}">
+                                <div>
+                                    <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+                                        <div class="field-label" title="Other Specialties">Other Specialties</div>
+                                        <aura:if isTrue="{! and(v.arrowDirection == 'arrowdown', v.selectedTabsoft == 'otherSpecs') }">
+                                            <button class="slds-button arrow-button">
+                                                <lightning:icon class="icn" iconName="utility:arrowup" size="xx-small" />
+                                            </button>
+                                        </aura:if>
+                                        <aura:if isTrue="{! and(v.arrowDirection != 'arrowdown', v.selectedTabsoft == 'otherSpecs') }">
+                                            <button class="slds-button arrow-button">
+                                                <lightning:icon class="icn" iconName="utility:arrowdown" size="xx-small" />
+                                            </button>
+                                        </aura:if>
+                                    </a>
+                                </div>
+                            </th>
+                            <th scope="col" onclick="{!c.sortByCost}">
+                                <div>
+                                    <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+                                        <div class="field-label" title="Cost">Cost</div>
+                                        <aura:if isTrue="{! and(v.arrowDirection == 'arrowdown', v.selectedTabsoft == 'cost') }">
+                                            <button class="slds-button arrow-button">
+                                                <lightning:icon class="icn" iconName="utility:arrowup" size="xx-small" />
+                                            </button>
+                                        </aura:if>
+                                        <aura:if isTrue="{! and(v.arrowDirection != 'arrowdown', v.selectedTabsoft == 'cost') }">
+                                            <button class="slds-button arrow-button">
+                                                <lightning:icon class="icn" iconName="utility:arrowdown" size="xx-small" />
+                                            </button>
+                                        </aura:if>
+                                    </a>
+                                </div>
+                            </th>
+                            <th scope="col" onclick="{!c.sortByQuality}">
+                                <div>
+                                    <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+                                        <div class="field-label" title="Quality">Quality</div>
+                                        <aura:if isTrue="{! and(v.arrowDirection == 'arrowdown', v.selectedTabsoft == 'quantity') }">
+                                            <button class="slds-button arrow-button">
+                                                <lightning:icon class="icn" iconName="utility:arrowup" size="xx-small" />
+                                            </button>
+                                        </aura:if>
+                                        <aura:if isTrue="{! and(v.arrowDirection != 'arrowdown', v.selectedTabsoft == 'quantity') }">
+                                            <button class="slds-button arrow-button">
+                                                <lightning:icon class="icn" iconName="utility:arrowdown" size="xx-small" />
+                                            </button>
+                                        </aura:if>
+                                    </a>
+                                </div>
+                            </th>
+                            <th scope="col" onclick="{!c.sortByProvider}">
+                                <div>
+                                    <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+                                        <div class="field-label" title="Provider Rating">Provider Rating</div>
+                                        <aura:if isTrue="{! and(v.arrowDirection == 'arrowdown', v.selectedTabsoft == 'provideRating') }">
+                                            <button class="slds-button arrow-button">
+                                                <lightning:icon class="icn" iconName="utility:arrowup" size="xx-small" />
+                                            </button>
+                                        </aura:if>
+                                        <aura:if isTrue="{! and(v.arrowDirection != 'arrowdown', v.selectedTabsoft == 'provideRating') }">
+                                            <button class="slds-button arrow-button">
+                                                <lightning:icon class="icn" iconName="utility:arrowdown" size="xx-small" />
+                                            </button>
+                                        </aura:if>
+                                    </a>
+                                </div>
+                            </th>
+                            <th scope="col" onclick="{!c.sortByInternal}">
+                                <div>
+                                    <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+                                        <div class="field-label" title="Internal Rating">Internal Rating</div>
+                                        <aura:if isTrue="{! and(v.arrowDirection == 'arrowdown', v.selectedTabsoft == 'internalRating') }">
+                                            <button class="slds-button arrow-button">
+                                                <lightning:icon class="icn" iconName="utility:arrowup" size="xx-small" />
+                                            </button>
+                                        </aura:if>
+                                        <aura:if isTrue="{! and(v.arrowDirection != 'arrowdown', v.selectedTabsoft == 'internalRating') }">
+                                            <button class="slds-button arrow-button">
+                                                <lightning:icon class="icn" iconName="utility:arrowdown" size="xx-small" />
+                                            </button>
+                                        </aura:if>
+                                    </a>
+                                </div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-th__action slds-text-link--reset" >
+                                    <div class="field-label" title="Insurance">Insurance</div>
+                                </div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-th__action slds-text-link--reset" >
+                                    <div class="field-label" title="Distance">Distance (mi)</div>
+                                </div>
+                            </th>
+                            <th scope="col" onclick="{!c.sortByCity}">
+                                <div>
+                                    <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+                                        <div class="field-label" title="City">City</div>
+                                        <aura:if isTrue="{! and(v.arrowDirection == 'arrowdown', v.selectedTabsoft == 'city') }">
+                                            <button class="slds-button arrow-button">
+                                                <lightning:icon class="icn" iconName="utility:arrowup" size="xx-small" />
+                                            </button>
+                                        </aura:if>
+                                        <aura:if isTrue="{! and(v.arrowDirection != 'arrowdown', v.selectedTabsoft == 'city') }">
+                                            <button class="slds-button arrow-button">
+                                                <lightning:icon class="icn" iconName="utility:arrowdown" size="xx-small" />
+                                            </button>
+                                        </aura:if>
+                                    </a>
+                                </div>
+                            </th>
+                            <th scope="col" onclick="{!c.sortByCode}">
+                                <div>
+                                    <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+                                        <div class="field-label" title="HCPCS Code">HCPCS Code</div>
+                                        <aura:if isTrue="{! and(v.arrowDirection == 'arrowdown', v.selectedTabsoft == 'code') }">
+                                            <button class="slds-button arrow-button">
+                                                <lightning:icon class="icn" iconName="utility:arrowup" size="xx-small" />
+                                            </button>
+                                        </aura:if>
+                                        <aura:if isTrue="{! and(v.arrowDirection != 'arrowdown', v.selectedTabsoft == 'code') }">
+                                            <button class="slds-button arrow-button">
+                                                <lightning:icon class="icn" iconName="utility:arrowdown" size="xx-small" />
+                                            </button>
+                                        </aura:if>
+                                    </a>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <aura:iteration items="{!v.specialists}" var="item">
+                            <tr data-id="{!item.specId}" data-cost="{!item.cost}" data-group="{!item.groupId}" data-quan="{!item.quantity}" data-prov = "{!item.provideRating}"
+                                data-int = "{!item.internalRating}" onclick="{!c.showRow}" class="trBackground">
+                                <td class="headcol" style="width: 27px;">
+                                    <aura:if isTrue="{!item.profileUrl != null}">
+                                        <a href="{!item.profileUrl}" target="_blank" style="margin-top: -10px; margin-bottom: -10px;">
+                                            <lightning:icon iconName="utility:identity" size="xx-small"/>
+                                        </a>
+                                    </aura:if>
+                                </td>
+                                <td class="headcol2">
+                                    <div title="{!item.specialistName}">{!item.specialistName}</div>
+                                </td>
+                                <td>
+                                    <div style="max-width: 180px !important;" class="cut-text" title="{!item.groupName}">{!item.groupName}</div>
+                                </td>
+                                <td>
+                                    <div title="{!item.primarySpec}">{!item.primarySpec}</div>
+                                </td>
+                                <td>
+                                    <div title="{!item.otherSpecs}">{!item.otherSpecs}</div>
+                                </td>
+                                <td>
+                                    <div title="{!item.cost}">{!'$' + item.cost}</div>
+                                </td>
+                                <td>
+                                    <aura:if isTrue="{!item.quantity == 1}">
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Error"/>
+                                    </aura:if>
+                                    <aura:if isTrue="{!item.quantity == 2}">
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Error"/>
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Error"/>
+                                    </aura:if>
+                                    <aura:if isTrue="{!item.quantity == 3}">
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Warning"/>
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Warning"/>
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Warning"/>
+                                    </aura:if>
+                                    <aura:if isTrue="{!item.quantity == 4}">
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Success"/>
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Success"/>
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Success"/>
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Success"/>
+                                    </aura:if>
+                                    <aura:if isTrue="{!item.quantity == 5}">
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Success"/>
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Success"/>
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Success"/>
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Success"/>
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Success"/>
+                                    </aura:if>
+                                </td>
+                                <td style="min-width: 140px !important;">
+                                    <aura:if isTrue="{!item.provideRating == 1}">
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Error"/>
+                                    </aura:if>
+                                    <aura:if isTrue="{!item.provideRating == 2}">
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Error"/>
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Error"/>
+                                    </aura:if>
+                                    <aura:if isTrue="{!item.provideRating == 3}">
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Warning"/>
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Warning"/>
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Warning"/>
+                                    </aura:if>
+                                    <aura:if isTrue="{!item.provideRating == 4}">
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Success"/>
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Success"/>
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Success"/>
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Success"/>
+                                    </aura:if>
+                                    <aura:if isTrue="{!item.provideRating == 5}">
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Success"/>
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Success"/>
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Success"/>
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Success"/>
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Success"/>
+                                    </aura:if>
+                                </td>
+                                <td>
+                                    <aura:if isTrue="{!item.internalRating == 1}">
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Error"/>
+                                    </aura:if>
+                                    <aura:if isTrue="{!item.internalRating == 2}">
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Error"/>
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Error"/>
+                                    </aura:if>
+                                    <aura:if isTrue="{!item.internalRating == 3}">
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Warning"/>
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Warning"/>
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Warning"/>
+                                    </aura:if>
+                                    <aura:if isTrue="{!item.internalRating == 4}">
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Success"/>
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Success"/>
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Success"/>
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Success"/>
+                                    </aura:if>
+                                    <aura:if isTrue="{!item.internalRating == 5}">
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Success"/>
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Success"/>
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Success"/>
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Success"/>
+                                        <lightning:icon iconName="utility:like" size="xx-small" variant="Success"/>
+                                    </aura:if>
+                                </td>
+                                <td>
+                                    <div style="max-width: 360px !important;" class="cut-text"  title="{!item.insurance}">{!item.insurance}</div>
+                                </td>
+                                <td>
+                                    <div title="{!item.dist}">{!item.dist}</div>
+                                </td>
+                                <td>
+                                    <div title="{!item.city}">{!item.city}</div>
+                                </td>
+                                <td style="min-width: 140px !important;">
+                                    <div title="{!item.hcpcsDescs}">{!item.hcpcsCodes}</div>
+                                </td>
+                            </tr>
+                        </aura:iteration>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <div class="action-buttons">
+                <lightning:button variant="neutral" label="Cancel" onclick="{!c.closeModal}" />
+                <lightning:button variant="brand" label="Select" onclick="{!c.setSpecialist}" disabled="{!v.selectedRow == null}"/>
+            </div>
+        </div>
+    </aura:if> 
+</aura:component>

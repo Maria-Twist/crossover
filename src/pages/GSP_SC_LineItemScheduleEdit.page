@@ -1,0 +1,160 @@
+<!-- 
+/* Copyright (C) Gary Smith Partnership - All Rights Reserved
+ * Unauthorized copying of this file, via any medium is strictly prohibited
+ * Proprietary and confidential
+ * Written by Gary Smith Partnership <gary@garysmithpartnership.com>, June, 2020
+ */
+ -->
+<apex:page standardController="Opportunity" extensions="GSP_SC_ctrLineItemScheduleEdit" lightningStylesheets="true">
+<head>
+	<style type="text/css">
+		.messageCell { color:#f00; font-weight:bold; }
+	</style>
+	<apex:includeScript value="{!URLFOR($Resource.GSP_SC_jQuery, 'jquery-3.2.1.min.js')}"/>
+</head>
+<body>
+	<apex:form >
+		<apex:outputPanel id="pageMessageId">
+			<apex:outputPanel rendered="{!bValid}">
+				<script type="text/javascript">
+					if ((typeof sforce != 'undefined') && sforce && (!!sforce.one))
+					{
+						sforce.one.back(true);
+					}
+					else
+					{
+						window.location.href='/{!opportunity.Id}';
+					}
+				</script>
+			</apex:outputPanel>
+			<apex:pageMessages escape="false" id="page_messages"/>
+		</apex:outputPanel>
+		<apex:pageMessages ></apex:pageMessages>
+		<apex:pageBlock title="Product Line Schedules for: {!opportunity.Name}">
+	
+			<apex:pageBlockButtons >
+				<apex:commandButton action="{!SaveSchedules}" value=" Save " rerender="pageMessageId"/>
+				<apex:commandButton action="{!Cancel}" value=" Cancel "/>
+				
+				
+			</apex:pageBlockButtons>
+			<input type="text" style="position:absolute;left:-1000px;width:0px;height:0px;"/>
+			<apex:outputPanel id="tableRepeat">
+			<apex:repeat value="{!lineItemWrapperMap}" var="lineItemKey">
+				<apex:pageBlockSection title="{!lineItemWrapperMap[lineItemKey].opportunityLineItem.Product2.Name}" columns="1">
+					<apex:outputPanel rendered="{!hasAmountField}" id="infoPanel">
+						<table style="width:70%">
+							<tr>
+								<td>
+									<apex:commandButton action="{!Autocalculate}"
+										value=" Auto-Calculate"
+										rerender="tableRepeat, __DEBUG"
+										disabled="{!lineItemWrapperMap[lineItemKey].canAutocalculate}">
+										<apex:param name="param1"
+											value="{!lineItemWrapperMap[lineItemKey].opportunityLineItem.Id}"
+											assignTo="{!opportunityLineItemId}"/>
+									</apex:commandButton>&nbsp;
+									<apex:commandButton action="{!Revert}"
+										value=" Reset "
+										rerender="tableRepeat, __DEBUG">
+										<apex:param name="param1"
+											value="{!lineItemWrapperMap[lineItemKey].opportunityLineItem.Id}"
+											assignTo="{!opportunityLineItemId}"/>
+									</apex:commandButton></td>
+								<td>
+									<span style="font-weight:bold;">
+									Line Item <apex:outputLabel value="{!$ObjectType.OpportunityLineItem.fields.TotalPrice.Label}"/>:&nbsp;</span>
+									<apex:outputText value="{0, number, ###,###,###,##0.00}">
+										<apex:param value="{!lineItemWrapperMap[lineItemKey].opportunityLineItem.TotalPrice}"/>
+									</apex:outputText></td>
+								<td>
+									<span style="font-weight:bold;">
+									<apex:outputLabel value="Revenue Total"/>:&nbsp;</span>
+									<span class="{!IF(lineItemWrapperMap[lineItemKey].RevenueTotal != lineItemWrapperMap[lineItemKey].opportunityLineItem.TotalPrice, 'messageCell', '')}">
+									<apex:outputPanel rendered="{!lineItemWrapperMap[lineItemKey].RevenueTotal<lineItemWrapperMap[lineItemKey].opportunityLineItem.TotalPrice}">
+									[
+									</apex:outputPanel>
+									<apex:outputText value="{0, number, ###,###,###,##0.00}">
+										<apex:param value="{!lineItemWrapperMap[lineItemKey].RevenueTotal}"/>
+									</apex:outputText>
+									<apex:outputPanel rendered="{!lineItemWrapperMap[lineItemKey].RevenueTotal<lineItemWrapperMap[lineItemKey].opportunityLineItem.TotalPrice}">
+									]
+									</apex:outputPanel></span></td>
+							</tr>
+						</table>
+					</apex:outputPanel>
+
+					<apex:pageBlockTable value="{!lineItemWrapperMap[lineItemKey].revenueSchedules}"
+						var="revenueSchedule"
+						style="width:100%"
+						styleClass="pw_pbTable"
+						rendered="{!lineItemWrapperMap[lineItemKey].revenueSchedules.size > 0}">
+						<apex:repeat value="{!dynamicFields}" var="field"  rendered="{!hasDynamicFields}">
+							<apex:column headerValue="{!$ObjectType.Revenue_Schedule__c.fields[field].Label}">
+								<apex:inputField value="{!revenueSchedule[field]}"
+									rendered="{!fieldSetMap[field].isEditable}"
+									required="{!fieldSetMap[field].bMandatory}">
+									<apex:actionSupport event="onchange"
+										action="{!Dummy}"
+										rendered="{!hasAmountField&&field='GSPProdSched__Revenue_Amount__c'}"
+										rerender="infoPanel"/>
+								</apex:inputField>
+									
+								<apex:outputField value="{!revenueSchedule[field]}"
+									rendered="{!!fieldSetMap[field].isEditable}"/>
+							</apex:column>
+						</apex:repeat>
+						
+
+						<apex:column headerValue="{!$ObjectType.Revenue_Schedule__c.fields.Name.Label}" rendered="{!!hasDynamicFields}">
+							<apex:outputPanel rendered="{!revenueSchedule.Id != null}">
+								<apex:outputLink value="/{!revenueSchedule.Id}" target="_blank">
+									<apex:outputText value="{!IF(revenueSchedule.Name == null, 'New Schedule', revenueSchedule.Name)}"/>
+								</apex:outputLink>
+							</apex:outputPanel>
+							<apex:outputPanel rendered="{!revenueSchedule.Id == null}">
+								<apex:outputText value="New Schedule"/>
+							</apex:outputPanel>
+						</apex:column>
+						<apex:column headerValue="{!$ObjectType.Revenue_Schedule__c.fields.Revenue_Schedule_Date__c.Label}" rendered="{!!hasDynamicFields}">
+							<apex:inputField value="{!revenueSchedule.Revenue_Schedule_Date__c}"
+								rendered="{!!lineItemWrapperMap[lineItemKey].opportunityLineItem.Opportunity.IsWon}"/>
+							<apex:outputField value="{!revenueSchedule.Revenue_Schedule_Date__c}"
+								rendered="{!lineItemWrapperMap[lineItemKey].opportunityLineItem.Opportunity.IsWon}"/>
+						</apex:column>
+						<apex:column headerValue="{!$ObjectType.Revenue_Schedule__c.fields.Revenue_Amount__c.Label}" rendered="{!!hasDynamicFields}">
+							<apex:inputField value="{!revenueSchedule.Revenue_Amount__c}"
+								rendered="{!!lineItemWrapperMap[lineItemKey].opportunityLineItem.Opportunity.IsWon}"/>
+							<apex:outputField value="{!revenueSchedule.Revenue_Amount__c}"
+								rendered="{!lineItemWrapperMap[lineItemKey].opportunityLineItem.Opportunity.IsWon}"/>
+						</apex:column>
+						<apex:column styleClass="fc_col" headerValue="{!$ObjectType.Revenue_Schedule__c.fields.Latest_Forecast__c.Label}" rendered="{!!hasDynamicFields}">
+							<apex:inputField value="{!revenueSchedule.Latest_Forecast__c}"/>
+						</apex:column>
+						<apex:column headerValue="{!$ObjectType.Revenue_Schedule__c.fields.Status__c.Label}" rendered="{!!hasDynamicFields}">
+							<apex:inputField value="{!revenueSchedule.Status__c}"/>
+						</apex:column>
+					</apex:pageBlockTable>
+				</apex:pageBlockSection>
+			</apex:repeat>
+			</apex:outputPanel>
+		</apex:pageBlock>
+	</apex:form>
+	<apex:outputPanel id="scriptBlock">
+	<script type="text/javascript">
+		var tabIndex = 1;
+		$("tr.dataRow").each(function() {
+			$this = $(this);
+			var inputElem = $this.find(".att_col").find("input");
+			inputElem.attr("tabindex", tabIndex++);
+		});
+		
+		$("tr.dataRow").each(function() {
+			$this = $(this);
+			var inputElem = $this.find(".fc_col").find("input");
+			inputElem.attr("tabindex", tabIndex++);
+		});
+	</script>
+	</apex:outputPanel>
+</body>
+</apex:page>

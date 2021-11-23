@@ -1,0 +1,138 @@
+<apex:page standardController="Opportunity" extensions="AddAccountsToNSOppController" sidebar="false" showHeader="false" standardStylesheets="false">
+  <apex:stylesheet value="{!URLFOR($Resource.AddAccountsToNSOppAssets, '/assets/bs/css/bootstrap.min.css')}" />
+  <apex:stylesheet value="{!URLFOR($Resource.AddAccountsToNSOppAssets, '/assets/bs/css/bootstrap-theme.min.css')}" />
+  <apex:stylesheet value="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"/>  
+  <apex:stylesheet value="{!URLFOR($Resource.AddAccountsToNSOppAssets, '/assets/css/custom.css')}" />
+   
+  <script type="text/javascript">
+      function doSearch() {
+        searchServer(
+          document.getElementById("accountName").value
+        )
+      };
+      function process() {
+          //$('#infoModal').modal('show'); 
+      };
+  </script> 
+
+<body class="wcs" role="document">
+    <hr/>
+<apex:outputPanel layout="block" styleClass="container-fluid">
+  <apex:form >
+  <apex:outputPanel layout="block" styleClass="panel panel-default">
+  <!--<apex:pageMessages id="errors" />-->
+      <apex:outputPanel layout="block" styleClass="panel-heading">
+        <h4 class="panel-title">Add Account(s)</h4>
+      </apex:outputPanel>
+      <apex:outputPanel layout="block" styleClass="panel-body">
+          
+  <apex:actionFunction name="searchServer" action="{!runSearch}" rerender="results,debug,errors">
+      <apex:param name="accountName" value="" />
+  </apex:actionFunction>
+          
+  <apex:actionFunction name="process" action="{!proccessSelected}" rerender="addedAccounts">
+  </apex:actionFunction>
+
+
+
+    <apex:outputPanel styleClass="form-group" layout="block">
+        <input type="text" id="accountName" onkeyup="doSearch();" placeholder="Enter Account Name" style="width: 100%" class="form-control"/>
+    </apex:outputPanel>
+ 
+          <hr/>
+
+
+<apex:pageBlock mode="edit" id="results">
+
+    <apex:pageBlockTable value="{!accounts}" var="account" styleClass="table table-checkable">
+        <apex:column >
+            <apex:inputCheckbox value="{!account.selected}"/>
+        </apex:column>
+        <apex:column >
+            <apex:facet name="header">
+                <apex:commandLink value="Account Name" action="{!toggleSort}" rerender="results,debug">
+                    <apex:param name="sortField" value="accountName" assignTo="{!sortField}"/>
+                </apex:commandLink>
+            </apex:facet>
+            <apex:outputField value="{!account.acc.Name}"/>
+        </apex:column>
+
+        <apex:column >
+            <apex:facet name="header">
+                <apex:commandLink value="Parent Account" action="{!toggleSort}" rerender="results,debug">
+                    <apex:param name="sortField" value="" assignTo="{!sortField}"/>
+                </apex:commandLink>
+            </apex:facet>
+            <apex:outputField value="{!account.acc.Parent.Name}"/>
+        </apex:column>
+
+        <apex:column >
+            <apex:facet name="header">
+                <apex:commandLink value="State" action="{!toggleSort}" rerender="results,debug">
+                    <apex:param name="sortField" value="" assignTo="{!sortField}"/>
+                </apex:commandLink>
+            </apex:facet>
+            <apex:outputField value="{!account.acc.BillingState}"/>
+        </apex:column>
+
+        <apex:column >
+            <apex:facet name="header">
+                <apex:commandLink value="City" action="{!toggleSort}" rerender="results,debug">
+                    <apex:param name="sortField" value="" assignTo="{!sortField}"/>
+                </apex:commandLink>
+            </apex:facet>
+            <apex:outputField value="{!account.acc.BillingCity}"/>
+        </apex:column>
+
+    </apex:pageBlockTable>
+
+    <apex:outputPanel layout="block" styleClass="panel-footer">
+        
+    <apex:commandLink rerender="addedAccounts">
+        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#infoModal" onClick="process()"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span> Add Selected Account(s)</button>
+    </apex:commandLink>
+    
+    
+    </apex:outputPanel>
+    
+
+
+</apex:pageBlock>
+
+
+
+
+          </apex:outputPanel>
+
+ 
+</apex:outputPanel> 
+</apex:form>
+ </apex:outputPanel>
+    <hr />
+    <!-- Modal -->
+    <div class="modal fade" id="infoModal" role="dialog" aria-labelledby="infoModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="infoModalLabel">Opportunity Updated</h4>
+          </div>
+          <div class="modal-body">
+            
+              <span class="label label-default"></span><apex:outputPanel id="addedAccounts">{!numberOfAccounts}</apex:outputPanel> account(s) have been added to the Opportunity
+          
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <apex:includeScript value="{!URLFOR($Resource.AddAccountsToNSOppAssets, '/assets/js/jquery.min.js')}"/>
+    <apex:includeScript value="//code.jquery.com/ui/1.11.4/jquery-ui.js"/>
+    <apex:includeScript value="{!URLFOR($Resource.AddAccountsToNSOppAssets, '/assets/bs/js/bootstrap.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.AddAccountsToNSOppAssets, '/assets/js/ie10-viewport-bug-workaround.js')}"/>
+    <!--<apex:includeScript value="{!URLFOR($Resource.AddAccountsToNSOppAssets, '/assets/js/custom.js')}"/>-->
+
+</body>
+ </apex:page>

@@ -1,0 +1,1824 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>AddProduct</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>AddProduct</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>AddProduct</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ChoosePricebook</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ChoosePricebook</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ChoosePricebook</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EditAllProduct</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EditAllProduct</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EditAllProduct</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>false</enableFeeds>
+    <fieldSets>
+        <fullName>GSP_SC_Schedule_Layout</fullName>
+        <description>Defines the columns in the &apos;Edit Line Item Schedule&apos; page. To make these editable, add the field to the &apos;Schedule Layout Editable&apos; fieldset.</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Revenue_Start_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Revenue_Months__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Revenue_Projection_Method__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>UnitPrice</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ListPrice</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Schedule Layout</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>GSP_SC_Schedule_Layout_Edit</fullName>
+        <description>Defines the editable columns in the &apos;Line Item Schedule&apos; page. These fields must appear in the Schedule Layout field set. They can be made page mandatory by clicking the spanner next to the field, and checking the &apos;Required&apos; checkbox.</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Revenue_Start_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Revenue_Projection_Method__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Revenue_Months__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ListPrice</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>UnitPrice</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Schedule Layout Edit</label>
+    </fieldSets>
+    <fields>
+        <fullName>Additional_Llives__c</fullName>
+        <externalId>false</externalId>
+        <label>Additional Llives</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Clinic__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This represents what clinic this population be primarily accessing or what clinic was the client sold.</inlineHelpText>
+        <label>Clinic</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Clinics</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <inlineHelpText>Extra detail surrounding the product</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>Discount</fullName>
+    </fields>
+    <fields>
+        <fullName>ListPrice</fullName>
+    </fields>
+    <fields>
+        <fullName>Location__c</fullName>
+        <externalId>false</externalId>
+        <formula>text(State__c) &amp; &quot; | &quot; &amp; Text(Region__c) &amp; &quot; | &quot; &amp; Text(Near_site_neighborhood__c)</formula>
+        <label>Location</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Name</fullName>
+    </fields>
+    <fields>
+        <fullName>Near_site_neighborhood__c</fullName>
+        <externalId>false</externalId>
+        <label>Near-site neighborhood</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Region__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>237 (Middle)</fullName>
+                    <default>false</default>
+                    <label>237 (Middle)</label>
+                </value>
+                <value>
+                    <fullName>Arlington Heights</fullName>
+                    <default>false</default>
+                    <label>Arlington Heights</label>
+                </value>
+                <value>
+                    <fullName>Atlanta</fullName>
+                    <default>false</default>
+                    <label>Atlanta</label>
+                </value>
+                <value>
+                    <fullName>Austin (Central / Downtown)</fullName>
+                    <default>false</default>
+                    <label>Austin (Central / Downtown)</label>
+                </value>
+                <value>
+                    <fullName>Austin (North)</fullName>
+                    <default>false</default>
+                    <label>Austin (North)</label>
+                </value>
+                <value>
+                    <fullName>Austin (South)</fullName>
+                    <default>false</default>
+                    <label>Austin (South)</label>
+                </value>
+                <value>
+                    <fullName>Austin (West)</fullName>
+                    <default>false</default>
+                    <label>Austin (West)</label>
+                </value>
+                <value>
+                    <fullName>Baltimore</fullName>
+                    <default>false</default>
+                    <label>Baltimore</label>
+                </value>
+                <value>
+                    <fullName>Berkeley</fullName>
+                    <default>false</default>
+                    <label>Berkeley</label>
+                </value>
+                <value>
+                    <fullName>Berryessa (880 East)</fullName>
+                    <default>false</default>
+                    <label>Berryessa (880 East)</label>
+                </value>
+                <value>
+                    <fullName>Bethesda</fullName>
+                    <default>false</default>
+                    <label>Bethesda</label>
+                </value>
+                <value>
+                    <fullName>Boston</fullName>
+                    <default>false</default>
+                    <label>Boston</label>
+                </value>
+                <value>
+                    <fullName>Boulder</fullName>
+                    <default>false</default>
+                    <label>Boulder</label>
+                </value>
+                <value>
+                    <fullName>Broomfield</fullName>
+                    <default>false</default>
+                    <label>Broomfield</label>
+                </value>
+                <value>
+                    <fullName>Bryant Park</fullName>
+                    <default>false</default>
+                    <label>Bryant Park</label>
+                </value>
+                <value>
+                    <fullName>Burbank</fullName>
+                    <default>false</default>
+                    <label>Burbank</label>
+                </value>
+                <value>
+                    <fullName>Cambridge</fullName>
+                    <default>false</default>
+                    <label>Cambridge</label>
+                </value>
+                <value>
+                    <fullName>Chandler</fullName>
+                    <default>false</default>
+                    <label>Chandler</label>
+                </value>
+                <value>
+                    <fullName>Chesapeake</fullName>
+                    <default>false</default>
+                    <label>Chesapeake</label>
+                </value>
+                <value>
+                    <fullName>Chicago (Downtown)</fullName>
+                    <default>false</default>
+                    <label>Chicago (Downtown)</label>
+                </value>
+                <value>
+                    <fullName>Columbus Circle</fullName>
+                    <default>false</default>
+                    <label>Columbus Circle</label>
+                </value>
+                <value>
+                    <fullName>Culver City</fullName>
+                    <default>false</default>
+                    <label>Culver City</label>
+                </value>
+                <value>
+                    <fullName>Deerfield</fullName>
+                    <default>false</default>
+                    <label>Deerfield</label>
+                </value>
+                <value>
+                    <fullName>Denver (Cherry Creek)</fullName>
+                    <default>false</default>
+                    <label>Denver (Cherry Creek)</label>
+                </value>
+                <value>
+                    <fullName>Denver (Highlands Ranch)</fullName>
+                    <default>false</default>
+                    <label>Denver (Highlands Ranch)</label>
+                </value>
+                <value>
+                    <fullName>Denver Tech Center</fullName>
+                    <default>false</default>
+                    <label>Denver Tech Center</label>
+                </value>
+                <value>
+                    <fullName>Design District (SF)</fullName>
+                    <default>false</default>
+                    <label>Design District (SF)</label>
+                </value>
+                <value>
+                    <fullName>Downtown (Boston)</fullName>
+                    <default>false</default>
+                    <label>Downtown (Boston)</label>
+                </value>
+                <value>
+                    <fullName>Downtown (Dallas)</fullName>
+                    <default>false</default>
+                    <label>Downtown (Dallas)</label>
+                </value>
+                <value>
+                    <fullName>Downtown (LA)</fullName>
+                    <default>false</default>
+                    <label>Downtown (LA)</label>
+                </value>
+                <value>
+                    <fullName>Downtown (NYC)</fullName>
+                    <default>false</default>
+                    <label>Downtown (NYC)</label>
+                </value>
+                <value>
+                    <fullName>Downtown Houston</fullName>
+                    <default>false</default>
+                    <label>Downtown Houston</label>
+                </value>
+                <value>
+                    <fullName>Downtown Los Angeles</fullName>
+                    <default>false</default>
+                    <label>Downtown Los Angeles</label>
+                </value>
+                <value>
+                    <fullName>El Segundo</fullName>
+                    <default>false</default>
+                    <label>El Segundo</label>
+                </value>
+                <value>
+                    <fullName>Emeryville</fullName>
+                    <default>false</default>
+                    <label>Emeryville</label>
+                </value>
+                <value>
+                    <fullName>Energy Corridor</fullName>
+                    <default>false</default>
+                    <label>Energy Corridor</label>
+                </value>
+                <value>
+                    <fullName>Englewood Cliffs</fullName>
+                    <default>false</default>
+                    <label>Englewood Cliffs</label>
+                </value>
+                <value>
+                    <fullName>Financial District (SF)</fullName>
+                    <default>false</default>
+                    <label>Financial District (SF)</label>
+                </value>
+                <value>
+                    <fullName>Fort Collins</fullName>
+                    <default>false</default>
+                    <label>Fort Collins</label>
+                </value>
+                <value>
+                    <fullName>Forth Worth</fullName>
+                    <default>false</default>
+                    <label>Forth Worth</label>
+                </value>
+                <value>
+                    <fullName>Foster City</fullName>
+                    <default>false</default>
+                    <label>Foster City</label>
+                </value>
+                <value>
+                    <fullName>Fountain Valley</fullName>
+                    <default>false</default>
+                    <label>Fountain Valley</label>
+                </value>
+                <value>
+                    <fullName>Fremont</fullName>
+                    <default>false</default>
+                    <label>Fremont</label>
+                </value>
+                <value>
+                    <fullName>Frisco</fullName>
+                    <default>false</default>
+                    <label>Frisco</label>
+                </value>
+                <value>
+                    <fullName>Glendale</fullName>
+                    <default>false</default>
+                    <label>Glendale</label>
+                </value>
+                <value>
+                    <fullName>Gramercy</fullName>
+                    <default>false</default>
+                    <label>Gramercy</label>
+                </value>
+                <value>
+                    <fullName>Hartford</fullName>
+                    <default>false</default>
+                    <label>Hartford</label>
+                </value>
+                <value>
+                    <fullName>Hercules</fullName>
+                    <default>false</default>
+                    <label>Hercules</label>
+                </value>
+                <value>
+                    <fullName>Hoffman Estates</fullName>
+                    <default>false</default>
+                    <label>Hoffman Estates</label>
+                </value>
+                <value>
+                    <fullName>Hollywood</fullName>
+                    <default>false</default>
+                    <label>Hollywood</label>
+                </value>
+                <value>
+                    <fullName>Hudson Yards</fullName>
+                    <default>false</default>
+                    <label>Hudson Yards</label>
+                </value>
+                <value>
+                    <fullName>Irvine</fullName>
+                    <default>false</default>
+                    <label>Irvine</label>
+                </value>
+                <value>
+                    <fullName>Kansas City</fullName>
+                    <default>false</default>
+                    <label>Kansas City</label>
+                </value>
+                <value>
+                    <fullName>Lake Forest (IL)</fullName>
+                    <default>false</default>
+                    <label>Lake Forest (IL)</label>
+                </value>
+                <value>
+                    <fullName>Las Colinas</fullName>
+                    <default>false</default>
+                    <label>Las Colinas</label>
+                </value>
+                <value>
+                    <fullName>League City</fullName>
+                    <default>false</default>
+                    <label>League City</label>
+                </value>
+                <value>
+                    <fullName>Lexington</fullName>
+                    <default>false</default>
+                    <label>Lexington</label>
+                </value>
+                <value>
+                    <fullName>Livermore</fullName>
+                    <default>false</default>
+                    <label>Livermore</label>
+                </value>
+                <value>
+                    <fullName>Lonetree</fullName>
+                    <default>false</default>
+                    <label>Lonetree</label>
+                </value>
+                <value>
+                    <fullName>Lonetree (Centennial)</fullName>
+                    <default>false</default>
+                    <label>Lonetree (Centennial)</label>
+                </value>
+                <value>
+                    <fullName>Los Gatos</fullName>
+                    <default>false</default>
+                    <label>Los Gatos</label>
+                </value>
+                <value>
+                    <fullName>Malvern</fullName>
+                    <default>false</default>
+                    <label>Malvern</label>
+                </value>
+                <value>
+                    <fullName>Manhattan (NYC)</fullName>
+                    <default>false</default>
+                    <label>Manhattan (NYC)</label>
+                </value>
+                <value>
+                    <fullName>Marin County</fullName>
+                    <default>false</default>
+                    <label>Marin County</label>
+                </value>
+                <value>
+                    <fullName>Menlo Park</fullName>
+                    <default>false</default>
+                    <label>Menlo Park</label>
+                </value>
+                <value>
+                    <fullName>Mesa</fullName>
+                    <default>false</default>
+                    <label>Mesa</label>
+                </value>
+                <value>
+                    <fullName>Midtown (NYC)</fullName>
+                    <default>false</default>
+                    <label>Midtown (NYC)</label>
+                </value>
+                <value>
+                    <fullName>Midtown East</fullName>
+                    <default>false</default>
+                    <label>Midtown East</label>
+                </value>
+                <value>
+                    <fullName>Midtown West</fullName>
+                    <default>false</default>
+                    <label>Midtown West</label>
+                </value>
+                <value>
+                    <fullName>Minneapolis</fullName>
+                    <default>false</default>
+                    <label>Minneapolis</label>
+                </value>
+                <value>
+                    <fullName>MIssion Bay (SF)</fullName>
+                    <default>false</default>
+                    <label>MIssion Bay (SF)</label>
+                </value>
+                <value>
+                    <fullName>Mission District (SF)</fullName>
+                    <default>false</default>
+                    <label>Mission District (SF)</label>
+                </value>
+                <value>
+                    <fullName>Moffet (West 237)</fullName>
+                    <default>false</default>
+                    <label>Moffet (West 237)</label>
+                </value>
+                <value>
+                    <fullName>Montague (West 880)</fullName>
+                    <default>false</default>
+                    <label>Montague (West 880)</label>
+                </value>
+                <value>
+                    <fullName>Morristown</fullName>
+                    <default>false</default>
+                    <label>Morristown</label>
+                </value>
+                <value>
+                    <fullName>Mountain View</fullName>
+                    <default>false</default>
+                    <label>Mountain View</label>
+                </value>
+                <value>
+                    <fullName>Naperville</fullName>
+                    <default>false</default>
+                    <label>Naperville</label>
+                </value>
+                <value>
+                    <fullName>Newark</fullName>
+                    <default>false</default>
+                    <label>Newark</label>
+                </value>
+                <value>
+                    <fullName>Newport Beach</fullName>
+                    <default>false</default>
+                    <label>Newport Beach</label>
+                </value>
+                <value>
+                    <fullName>Norfolk</fullName>
+                    <default>false</default>
+                    <label>Norfolk</label>
+                </value>
+                <value>
+                    <fullName>Northbrook</fullName>
+                    <default>false</default>
+                    <label>Northbrook</label>
+                </value>
+                <value>
+                    <fullName>Oak Brook</fullName>
+                    <default>false</default>
+                    <label>Oak Brook</label>
+                </value>
+                <value>
+                    <fullName>Oakland</fullName>
+                    <default>false</default>
+                    <label>Oakland</label>
+                </value>
+                <value>
+                    <fullName>Orlando</fullName>
+                    <default>false</default>
+                    <label>Orlando</label>
+                </value>
+                <value>
+                    <fullName>Overland Park</fullName>
+                    <default>false</default>
+                    <label>Overland Park</label>
+                </value>
+                <value>
+                    <fullName>Palo Alto</fullName>
+                    <default>false</default>
+                    <label>Palo Alto</label>
+                </value>
+                <value>
+                    <fullName>Pasadena</fullName>
+                    <default>false</default>
+                    <label>Pasadena</label>
+                </value>
+                <value>
+                    <fullName>Philadelphia</fullName>
+                    <default>false</default>
+                    <label>Philadelphia</label>
+                </value>
+                <value>
+                    <fullName>Phoenix (Downtown)</fullName>
+                    <default>false</default>
+                    <label>Phoenix (Downtown)</label>
+                </value>
+                <value>
+                    <fullName>Plano</fullName>
+                    <default>false</default>
+                    <label>Plano</label>
+                </value>
+                <value>
+                    <fullName>Pleasanton</fullName>
+                    <default>false</default>
+                    <label>Pleasanton</label>
+                </value>
+                <value>
+                    <fullName>Portland</fullName>
+                    <default>false</default>
+                    <label>Portland</label>
+                </value>
+                <value>
+                    <fullName>Princeton</fullName>
+                    <default>false</default>
+                    <label>Princeton</label>
+                </value>
+                <value>
+                    <fullName>Raleigh</fullName>
+                    <default>false</default>
+                    <label>Raleigh</label>
+                </value>
+                <value>
+                    <fullName>Redmond</fullName>
+                    <default>false</default>
+                    <label>Redmond</label>
+                </value>
+                <value>
+                    <fullName>Redwood City</fullName>
+                    <default>false</default>
+                    <label>Redwood City</label>
+                </value>
+                <value>
+                    <fullName>Richardson</fullName>
+                    <default>false</default>
+                    <label>Richardson</label>
+                </value>
+                <value>
+                    <fullName>Richmond (Downtown)</fullName>
+                    <default>false</default>
+                    <label>Richmond (Downtown)</label>
+                </value>
+                <value>
+                    <fullName>Richmond (Northwest)</fullName>
+                    <default>false</default>
+                    <label>Richmond (Northwest)</label>
+                </value>
+                <value>
+                    <fullName>Rosemont</fullName>
+                    <default>false</default>
+                    <label>Rosemont</label>
+                </value>
+                <value>
+                    <fullName>Roseville</fullName>
+                    <default>false</default>
+                    <label>Roseville</label>
+                </value>
+                <value>
+                    <fullName>Saint Paul</fullName>
+                    <default>false</default>
+                    <label>Saint Paul</label>
+                </value>
+                <value>
+                    <fullName>Salt Lake City</fullName>
+                    <default>false</default>
+                    <label>Salt Lake City</label>
+                </value>
+                <value>
+                    <fullName>San Antonio</fullName>
+                    <default>false</default>
+                    <label>San Antonio</label>
+                </value>
+                <value>
+                    <fullName>San Diego</fullName>
+                    <default>false</default>
+                    <label>San Diego</label>
+                </value>
+                <value>
+                    <fullName>San Francisco</fullName>
+                    <default>false</default>
+                    <label>San Francisco</label>
+                </value>
+                <value>
+                    <fullName>San Jose</fullName>
+                    <default>false</default>
+                    <label>San Jose</label>
+                </value>
+                <value>
+                    <fullName>San Jose (Downtown)</fullName>
+                    <default>false</default>
+                    <label>San Jose (Downtown)</label>
+                </value>
+                <value>
+                    <fullName>San Mateo</fullName>
+                    <default>false</default>
+                    <label>San Mateo</label>
+                </value>
+                <value>
+                    <fullName>San Ramon</fullName>
+                    <default>false</default>
+                    <label>San Ramon</label>
+                </value>
+                <value>
+                    <fullName>Santa Clara (101)</fullName>
+                    <default>false</default>
+                    <label>Santa Clara (101)</label>
+                </value>
+                <value>
+                    <fullName>Santa Monica</fullName>
+                    <default>false</default>
+                    <label>Santa Monica</label>
+                </value>
+                <value>
+                    <fullName>Santa Rosa</fullName>
+                    <default>false</default>
+                    <label>Santa Rosa</label>
+                </value>
+                <value>
+                    <fullName>Schaumburg</fullName>
+                    <default>false</default>
+                    <label>Schaumburg</label>
+                </value>
+                <value>
+                    <fullName>Scottsdale</fullName>
+                    <default>false</default>
+                    <label>Scottsdale</label>
+                </value>
+                <value>
+                    <fullName>Seattle</fullName>
+                    <default>false</default>
+                    <label>Seattle</label>
+                </value>
+                <value>
+                    <fullName>Seattle (Downtown)</fullName>
+                    <default>false</default>
+                    <label>Seattle (Downtown)</label>
+                </value>
+                <value>
+                    <fullName>Silicon Beach (LA)</fullName>
+                    <default>false</default>
+                    <label>Silicon Beach (LA)</label>
+                </value>
+                <value>
+                    <fullName>Smithfield</fullName>
+                    <default>false</default>
+                    <label>Smithfield</label>
+                </value>
+                <value>
+                    <fullName>SOMA (SF)</fullName>
+                    <default>false</default>
+                    <label>SOMA (SF)</label>
+                </value>
+                <value>
+                    <fullName>South Financial District (SF)</fullName>
+                    <default>false</default>
+                    <label>South Financial District (SF)</label>
+                </value>
+                <value>
+                    <fullName>South of Market (SF)</fullName>
+                    <default>false</default>
+                    <label>South of Market (SF)</label>
+                </value>
+                <value>
+                    <fullName>Spring</fullName>
+                    <default>false</default>
+                    <label>Spring</label>
+                </value>
+                <value>
+                    <fullName>Stamford</fullName>
+                    <default>false</default>
+                    <label>Stamford</label>
+                </value>
+                <value>
+                    <fullName>Sunnyvale</fullName>
+                    <default>false</default>
+                    <label>Sunnyvale</label>
+                </value>
+                <value>
+                    <fullName>Tempe</fullName>
+                    <default>false</default>
+                    <label>Tempe</label>
+                </value>
+                <value>
+                    <fullName>Uptown</fullName>
+                    <default>false</default>
+                    <label>Uptown</label>
+                </value>
+                <value>
+                    <fullName>Walnut Creek</fullName>
+                    <default>false</default>
+                    <label>Walnut Creek</label>
+                </value>
+                <value>
+                    <fullName>West Los Angeles</fullName>
+                    <default>false</default>
+                    <label>West Los Angeles</label>
+                </value>
+                <value>
+                    <fullName>Westport</fullName>
+                    <default>false</default>
+                    <label>Westport</label>
+                </value>
+                <value>
+                    <fullName>Wilmington</fullName>
+                    <default>false</default>
+                    <label>Wilmington</label>
+                </value>
+                <value>
+                    <fullName>Woodland Hills</fullName>
+                    <default>false</default>
+                    <label>Woodland Hills</label>
+                </value>
+                <value>
+                    <fullName>Woodlands</fullName>
+                    <default>false</default>
+                    <label>Woodlands</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Phoenix</controllingFieldValue>
+                <valueName>Chandler</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Phoenix</controllingFieldValue>
+                <valueName>Mesa</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Phoenix</controllingFieldValue>
+                <valueName>Phoenix (Downtown)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Phoenix</controllingFieldValue>
+                <valueName>Scottsdale</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Phoenix</controllingFieldValue>
+                <valueName>Tempe</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Raleigh</controllingFieldValue>
+                <valueName>Raleigh</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Richmond</controllingFieldValue>
+                <valueName>Richmond (Downtown)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Richmond</controllingFieldValue>
+                <valueName>Richmond (Northwest)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>San Antonio</controllingFieldValue>
+                <valueName>San Antonio</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Southern California</controllingFieldValue>
+                <valueName>Burbank</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Southern California</controllingFieldValue>
+                <valueName>Culver City</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Southern California</controllingFieldValue>
+                <valueName>Downtown (LA)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Southern California</controllingFieldValue>
+                <valueName>Downtown Los Angeles</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Southern California</controllingFieldValue>
+                <valueName>El Segundo</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Southern California</controllingFieldValue>
+                <valueName>Fountain Valley</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Southern California</controllingFieldValue>
+                <valueName>Glendale</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Southern California</controllingFieldValue>
+                <valueName>Hollywood</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Southern California</controllingFieldValue>
+                <valueName>Irvine</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Southern California</controllingFieldValue>
+                <valueName>Newport Beach</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Southern California</controllingFieldValue>
+                <valueName>Pasadena</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Southern California</controllingFieldValue>
+                <valueName>San Diego</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Southern California</controllingFieldValue>
+                <valueName>Santa Monica</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Southern California</controllingFieldValue>
+                <valueName>Silicon Beach (LA)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Southern California</controllingFieldValue>
+                <valueName>West Los Angeles</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Southern California</controllingFieldValue>
+                <valueName>Woodland Hills</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Utah</controllingFieldValue>
+                <valueName>Salt Lake City</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Conneticut</controllingFieldValue>
+                <controllingFieldValue>Coastal CT</controllingFieldValue>
+                <valueName>Stamford</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Dallas</controllingFieldValue>
+                <valueName>Downtown (Dallas)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Dallas</controllingFieldValue>
+                <valueName>Forth Worth</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Dallas</controllingFieldValue>
+                <valueName>Frisco</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Dallas</controllingFieldValue>
+                <valueName>Las Colinas</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Dallas</controllingFieldValue>
+                <valueName>Plano</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Dallas</controllingFieldValue>
+                <valueName>Richardson</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>DC</controllingFieldValue>
+                <valueName>Baltimore</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>DC</controllingFieldValue>
+                <valueName>Bethesda</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Denver</controllingFieldValue>
+                <valueName>Boulder</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Denver</controllingFieldValue>
+                <valueName>Broomfield</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Denver</controllingFieldValue>
+                <valueName>Denver (Cherry Creek)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Denver</controllingFieldValue>
+                <valueName>Denver (Highlands Ranch)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Denver</controllingFieldValue>
+                <valueName>Denver Tech Center</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Denver</controllingFieldValue>
+                <valueName>Fort Collins</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Denver</controllingFieldValue>
+                <valueName>Lonetree</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Denver</controllingFieldValue>
+                <valueName>Lonetree (Centennial)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Houston</controllingFieldValue>
+                <valueName>Downtown Houston</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Houston</controllingFieldValue>
+                <valueName>Energy Corridor</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Houston</controllingFieldValue>
+                <valueName>League City</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Houston</controllingFieldValue>
+                <valueName>Spring</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Houston</controllingFieldValue>
+                <valueName>Uptown</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Kansas City</controllingFieldValue>
+                <valueName>Kansas City</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Kansas City</controllingFieldValue>
+                <valueName>Overland Park</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>North NJ</controllingFieldValue>
+                <valueName>Morristown</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>North NJ</controllingFieldValue>
+                <controllingFieldValue>NY South</controllingFieldValue>
+                <valueName>Newark</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>North NJ</controllingFieldValue>
+                <controllingFieldValue>NY South</controllingFieldValue>
+                <valueName>Princeton</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Northwest</controllingFieldValue>
+                <valueName>Redmond</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Northwest</controllingFieldValue>
+                <valueName>Seattle</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Northwest</controllingFieldValue>
+                <valueName>Seattle (Downtown)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NYC</controllingFieldValue>
+                <valueName>Bryant Park</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NYC</controllingFieldValue>
+                <controllingFieldValue>NY South</controllingFieldValue>
+                <valueName>Columbus Circle</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NYC</controllingFieldValue>
+                <valueName>Downtown (NYC)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NYC</controllingFieldValue>
+                <controllingFieldValue>NY South</controllingFieldValue>
+                <valueName>Gramercy</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NYC</controllingFieldValue>
+                <valueName>Hudson Yards</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NYC</controllingFieldValue>
+                <controllingFieldValue>NY South</controllingFieldValue>
+                <valueName>Midtown (NYC)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NYC</controllingFieldValue>
+                <controllingFieldValue>NY South</controllingFieldValue>
+                <valueName>Midtown East</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NYC</controllingFieldValue>
+                <valueName>Midtown West</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Atlanta</controllingFieldValue>
+                <valueName>Atlanta</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Austin</controllingFieldValue>
+                <valueName>Austin (Central / Downtown)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Austin</controllingFieldValue>
+                <valueName>Austin (North)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Austin</controllingFieldValue>
+                <valueName>Austin (South)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Austin</controllingFieldValue>
+                <valueName>Austin (West)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bay Area</controllingFieldValue>
+                <valueName>237 (Middle)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bay Area</controllingFieldValue>
+                <valueName>Berkeley</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bay Area</controllingFieldValue>
+                <valueName>Berryessa (880 East)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bay Area</controllingFieldValue>
+                <valueName>Emeryville</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bay Area</controllingFieldValue>
+                <valueName>Foster City</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bay Area</controllingFieldValue>
+                <valueName>Fremont</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bay Area</controllingFieldValue>
+                <valueName>Hercules</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bay Area</controllingFieldValue>
+                <valueName>Livermore</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bay Area</controllingFieldValue>
+                <valueName>Los Gatos</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bay Area</controllingFieldValue>
+                <valueName>Marin County</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bay Area</controllingFieldValue>
+                <valueName>Menlo Park</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bay Area</controllingFieldValue>
+                <valueName>Moffet (West 237)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bay Area</controllingFieldValue>
+                <valueName>Montague (West 880)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bay Area</controllingFieldValue>
+                <valueName>Mountain View</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bay Area</controllingFieldValue>
+                <valueName>Oakland</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bay Area</controllingFieldValue>
+                <valueName>Palo Alto</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bay Area</controllingFieldValue>
+                <valueName>Pleasanton</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bay Area</controllingFieldValue>
+                <valueName>Redwood City</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bay Area</controllingFieldValue>
+                <valueName>Roseville</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bay Area</controllingFieldValue>
+                <valueName>San Francisco</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bay Area</controllingFieldValue>
+                <valueName>San Jose</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bay Area</controllingFieldValue>
+                <valueName>San Jose (Downtown)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bay Area</controllingFieldValue>
+                <valueName>San Mateo</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bay Area</controllingFieldValue>
+                <valueName>San Ramon</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bay Area</controllingFieldValue>
+                <valueName>Santa Clara (101)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bay Area</controllingFieldValue>
+                <valueName>Santa Rosa</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bay Area</controllingFieldValue>
+                <valueName>SOMA (SF)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Bay Area</controllingFieldValue>
+                <valueName>Walnut Creek</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Boston</controllingFieldValue>
+                <valueName>Boston</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Boston</controllingFieldValue>
+                <valueName>Cambridge</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Boston</controllingFieldValue>
+                <valueName>Downtown (Boston)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Boston</controllingFieldValue>
+                <valueName>Lexington</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Central Florida</controllingFieldValue>
+                <valueName>Orlando</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chicago</controllingFieldValue>
+                <valueName>Arlington Heights</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chicago</controllingFieldValue>
+                <valueName>Chicago (Downtown)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chicago</controllingFieldValue>
+                <valueName>Deerfield</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chicago</controllingFieldValue>
+                <valueName>Hoffman Estates</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chicago</controllingFieldValue>
+                <valueName>Lake Forest (IL)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chicago</controllingFieldValue>
+                <valueName>Naperville</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chicago</controllingFieldValue>
+                <valueName>Northbrook</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chicago</controllingFieldValue>
+                <valueName>Oak Brook</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chicago</controllingFieldValue>
+                <valueName>Rosemont</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chicago</controllingFieldValue>
+                <valueName>Schaumburg</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Coastal CT</controllingFieldValue>
+                <valueName>Hartford</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Coastal CT</controllingFieldValue>
+                <valueName>Westport</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Philadelphia</controllingFieldValue>
+                <valueName>Wilmington</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>OpportunityId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PEPM_Reset_Period__c</fullName>
+        <description>How many months before PEPM resets.  Yearly=12, Quarterly=3, Monthly=1</description>
+        <externalId>false</externalId>
+        <label>PEPM Reset Period</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PEPM__c</fullName>
+        <externalId>false</externalId>
+        <formula>TotalPrice / Quantity / 12</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>PEPM</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Pricing_Model__c</fullName>
+        <externalId>false</externalId>
+        <label>Pricing Model</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New Forecast Model</fullName>
+                    <default>false</default>
+                    <label>New Forecast Model</label>
+                </value>
+                <value>
+                    <fullName>Virtual</fullName>
+                    <default>false</default>
+                    <label>Virtual</label>
+                </value>
+                <value>
+                    <fullName>Private Care Team</fullName>
+                    <default>false</default>
+                    <label>Private Care Team</label>
+                </value>
+                <value>
+                    <fullName>Shared Care Team</fullName>
+                    <default>false</default>
+                    <label>Shared Care Team</label>
+                </value>
+                <value>
+                    <fullName>Cost+</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Cost+</label>
+                </value>
+                <value>
+                    <fullName>Fixed Fee</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Fixed Fee</label>
+                </value>
+                <value>
+                    <fullName>PEPM</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>PEPM</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Product2Id</fullName>
+        <businessStatus>Active</businessStatus>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ProductCode</fullName>
+    </fields>
+    <fields>
+        <fullName>Product_Family__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(PricebookEntry.Product2.Family)</formula>
+        <inlineHelpText>This is the product family from the price book entry</inlineHelpText>
+        <label>Product Family</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quantity</fullName>
+        <inlineHelpText>Represents how many of the per unit pricing to multiply against, ie Per User or Per Employee.  So this field represents the employees or users on average for the year.  For Cost+, use 1 unit.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>Region__c</fullName>
+        <externalId>false</externalId>
+        <label>Region</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>State__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Atlanta</fullName>
+                    <default>false</default>
+                    <label>Atlanta</label>
+                </value>
+                <value>
+                    <fullName>Austin</fullName>
+                    <default>false</default>
+                    <label>Austin</label>
+                </value>
+                <value>
+                    <fullName>Bay Area</fullName>
+                    <default>false</default>
+                    <label>Bay Area</label>
+                </value>
+                <value>
+                    <fullName>Boston</fullName>
+                    <default>false</default>
+                    <label>Boston</label>
+                </value>
+                <value>
+                    <fullName>Central CT</fullName>
+                    <default>false</default>
+                    <label>Central CT</label>
+                </value>
+                <value>
+                    <fullName>Central Florida</fullName>
+                    <default>false</default>
+                    <label>Central Florida</label>
+                </value>
+                <value>
+                    <fullName>Charlotte</fullName>
+                    <default>false</default>
+                    <label>Charlotte</label>
+                </value>
+                <value>
+                    <fullName>Chicago</fullName>
+                    <default>false</default>
+                    <label>Chicago</label>
+                </value>
+                <value>
+                    <fullName>Coastal CT</fullName>
+                    <default>false</default>
+                    <label>Coastal CT</label>
+                </value>
+                <value>
+                    <fullName>Conneticut</fullName>
+                    <default>false</default>
+                    <label>Conneticut</label>
+                </value>
+                <value>
+                    <fullName>Dallas</fullName>
+                    <default>false</default>
+                    <label>Dallas</label>
+                </value>
+                <value>
+                    <fullName>DC</fullName>
+                    <default>false</default>
+                    <label>DC</label>
+                </value>
+                <value>
+                    <fullName>Denver</fullName>
+                    <default>false</default>
+                    <label>Denver</label>
+                </value>
+                <value>
+                    <fullName>Houston</fullName>
+                    <default>false</default>
+                    <label>Houston</label>
+                </value>
+                <value>
+                    <fullName>Kansas City</fullName>
+                    <default>false</default>
+                    <label>Kansas City</label>
+                </value>
+                <value>
+                    <fullName>North Florida</fullName>
+                    <default>false</default>
+                    <label>North Florida</label>
+                </value>
+                <value>
+                    <fullName>North NJ</fullName>
+                    <default>false</default>
+                    <label>North NJ</label>
+                </value>
+                <value>
+                    <fullName>Northwest</fullName>
+                    <default>false</default>
+                    <label>Northwest</label>
+                </value>
+                <value>
+                    <fullName>NYC</fullName>
+                    <default>false</default>
+                    <label>NYC</label>
+                </value>
+                <value>
+                    <fullName>NY South</fullName>
+                    <default>false</default>
+                    <label>NY South</label>
+                </value>
+                <value>
+                    <fullName>Philadelphia</fullName>
+                    <default>false</default>
+                    <label>Philadelphia</label>
+                </value>
+                <value>
+                    <fullName>Phoenix</fullName>
+                    <default>false</default>
+                    <label>Phoenix</label>
+                </value>
+                <value>
+                    <fullName>Raleigh</fullName>
+                    <default>false</default>
+                    <label>Raleigh</label>
+                </value>
+                <value>
+                    <fullName>Richmond</fullName>
+                    <default>false</default>
+                    <label>Richmond</label>
+                </value>
+                <value>
+                    <fullName>San Antonio</fullName>
+                    <default>false</default>
+                    <label>San Antonio</label>
+                </value>
+                <value>
+                    <fullName>Southern California</fullName>
+                    <default>false</default>
+                    <label>Southern California</label>
+                </value>
+                <value>
+                    <fullName>South Florida</fullName>
+                    <default>false</default>
+                    <label>South Florida</label>
+                </value>
+                <value>
+                    <fullName>Utah</fullName>
+                    <default>false</default>
+                    <label>Utah</label>
+                </value>
+                <value>
+                    <fullName>Winston-Salem</fullName>
+                    <default>false</default>
+                    <label>Winston-Salem</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>UT</controllingFieldValue>
+                <valueName>Utah</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>VA</controllingFieldValue>
+                <valueName>DC</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>VA</controllingFieldValue>
+                <valueName>Richmond</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>WA</controllingFieldValue>
+                <valueName>Northwest</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>GA</controllingFieldValue>
+                <valueName>Atlanta</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>IL</controllingFieldValue>
+                <valueName>Chicago</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>KS</controllingFieldValue>
+                <valueName>Kansas City</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>AZ</controllingFieldValue>
+                <valueName>Phoenix</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>CA</controllingFieldValue>
+                <valueName>Bay Area</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>CA</controllingFieldValue>
+                <valueName>Southern California</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>CO</controllingFieldValue>
+                <valueName>Denver</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>CT</controllingFieldValue>
+                <valueName>Central CT</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>CT</controllingFieldValue>
+                <valueName>Coastal CT</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>CT</controllingFieldValue>
+                <valueName>Conneticut</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>DE</controllingFieldValue>
+                <controllingFieldValue>PA</controllingFieldValue>
+                <valueName>Philadelphia</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>FL</controllingFieldValue>
+                <valueName>Central Florida</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>FL</controllingFieldValue>
+                <valueName>North Florida</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>FL</controllingFieldValue>
+                <valueName>South Florida</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>MA</controllingFieldValue>
+                <valueName>Boston</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NJ</controllingFieldValue>
+                <valueName>North NJ</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NJ</controllingFieldValue>
+                <valueName>NY South</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NY</controllingFieldValue>
+                <valueName>NYC</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NC</controllingFieldValue>
+                <valueName>Charlotte</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NC</controllingFieldValue>
+                <valueName>Raleigh</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NC</controllingFieldValue>
+                <valueName>Winston-Salem</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>TX</controllingFieldValue>
+                <valueName>Austin</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>TX</controllingFieldValue>
+                <valueName>Dallas</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>TX</controllingFieldValue>
+                <valueName>Houston</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>TX</controllingFieldValue>
+                <valueName>San Antonio</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Revenue_Months__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This spreads the Sales Price x Quantity over the number of periods selected.  For revenue that is monthly over a 12 months period, this would be 12.</inlineHelpText>
+        <label># Revenue Schedules</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Revenue_Projection_Method__c</fullName>
+        <externalId>false</externalId>
+        <label>Revenue Projection Method</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Straight Line</fullName>
+                    <default>true</default>
+                    <label>Straight Line</label>
+                </value>
+                <value>
+                    <fullName>S-Curve</fullName>
+                    <default>false</default>
+                    <label>S-Curve</label>
+                </value>
+                <value>
+                    <fullName>S-Curve - TEST</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>S-Curve - TEST</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Revenue_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Represents the calculation of when this revenue line starts.</inlineHelpText>
+        <label>Revenue Start Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ServiceDate</fullName>
+    </fields>
+    <fields>
+        <fullName>State__c</fullName>
+        <externalId>false</externalId>
+        <label>State</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>US_State</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Subtotal</fullName>
+    </fields>
+    <fields>
+        <fullName>TotalPrice</fullName>
+    </fields>
+    <fields>
+        <fullName>UnitPrice</fullName>
+        <inlineHelpText>This price represents an annual price.  If the estimate is a $30 PEPM on average for the year, that would be $360 PEPY that would be entered here.  For Cost+ this represents the whole value of this line item in the budget.</inlineHelpText>
+    </fields>
+</CustomObject>

@@ -1,0 +1,3041 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Patient_Referral_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>Patient_Referral_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Patient_Referral_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>Patient__c</fields>
+        <fields>Status__c</fields>
+        <fields>Urgency__c</fields>
+        <label>Patient Referral Compact Layout</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This object will store the Patient Referrals beign managed.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Amino_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Amino Notes</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Amino__c</fullName>
+        <externalId>false</externalId>
+        <label>Amino</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Smart Match</fullName>
+                    <default>false</default>
+                    <label>Smart Match</label>
+                </value>
+                <value>
+                    <fullName>Non-Smart Match</fullName>
+                    <default>false</default>
+                    <label>Non-Smart Match</label>
+                </value>
+                <value>
+                    <fullName>Provider not found</fullName>
+                    <default>false</default>
+                    <label>Provider not found</label>
+                </value>
+                <value>
+                    <fullName>Amino Provider</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Amino Provider</label>
+                </value>
+                <value>
+                    <fullName>Other Provider</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Other Provider</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Appointment_Date_Entered__c</fullName>
+        <description>Day that the appointment date field was entered.</description>
+        <externalId>false</externalId>
+        <label>Appointment Date Entered</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Appointment_Date__c</fullName>
+        <description>Date the appointment was completed for the Patient Referral. Requested by Sarah L for Patient Referral Management project.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the date the appointment was completed for this Patient Referral.</inlineHelpText>
+        <label>Appointment Date</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Approx_Cost_of_Appointment__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What is the approximate cost for this appointment?</inlineHelpText>
+        <label>Approx. Cost of Appointment</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Case_URL__c</fullName>
+        <externalId>false</externalId>
+        <label>Case URL</label>
+        <length>200</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Castlight_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Castlight Notes</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Castlight__c</fullName>
+        <externalId>false</externalId>
+        <label>Castlight</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Best Match</fullName>
+                    <default>false</default>
+                    <label>Best Match</label>
+                </value>
+                <value>
+                    <fullName>Clinical Ratings</fullName>
+                    <default>false</default>
+                    <label>Clinical Ratings</label>
+                </value>
+                <value>
+                    <fullName>Distance</fullName>
+                    <default>false</default>
+                    <label>Distance</label>
+                </value>
+                <value>
+                    <fullName>Highest Rated</fullName>
+                    <default>false</default>
+                    <label>Highest Rated</label>
+                </value>
+                <value>
+                    <fullName>Least Expensive</fullName>
+                    <default>false</default>
+                    <label>Least Expensive</label>
+                </value>
+                <value>
+                    <fullName>Most Reviews</fullName>
+                    <default>false</default>
+                    <label>Most Reviews</label>
+                </value>
+                <value>
+                    <fullName>Declined</fullName>
+                    <default>false</default>
+                    <label>Declined</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Clinic__c</fullName>
+        <externalId>false</externalId>
+        <label>Clinic</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Clinics</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Closed_Date__c</fullName>
+        <description>Date/time the status was changed to &quot;Closed&quot;</description>
+        <externalId>false</externalId>
+        <label>Closed Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Community_Resources__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Community Resources</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Complicated_Referral__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Complicated Referral</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Complication_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Complication Reason</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Completing extra Forms</fullName>
+                    <default>false</default>
+                    <label>Completing extra Forms</label>
+                </value>
+                <value>
+                    <fullName>Difficult Insurance</fullName>
+                    <default>false</default>
+                    <label>Difficult Insurance</label>
+                </value>
+                <value>
+                    <fullName>Find specialist with second language</fullName>
+                    <default>false</default>
+                    <label>Find specialist with second language</label>
+                </value>
+                <value>
+                    <fullName>Incorrect Referral Placed</fullName>
+                    <default>false</default>
+                    <label>Incorrect Referral Placed</label>
+                </value>
+                <value>
+                    <fullName>Interpreter services needed</fullName>
+                    <default>false</default>
+                    <label>Interpreter services needed</label>
+                </value>
+                <value>
+                    <fullName>Provider Request for additional research or help</fullName>
+                    <default>false</default>
+                    <label>Provider Request for additional research or help</label>
+                </value>
+                <value>
+                    <fullName>Reroute</fullName>
+                    <default>false</default>
+                    <label>Reroute</label>
+                </value>
+                <value>
+                    <fullName>Research for low cost options</fullName>
+                    <default>false</default>
+                    <label>Research for low cost options</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Days_Until_Patient_Seen__c</fullName>
+        <description>Used for reporting to determine the number of days between referral and patient being seen.</description>
+        <externalId>false</externalId>
+        <formula>((Appointment_Date__c) - (DATEVALUE( CreatedDate ))) -
+
+(CASE(
+MOD(Appointment_Date__c - DATE(1985,6,24),7),
+0 , CASE( MOD( DATEVALUE(CreatedDate) - Appointment_Date_Entered__c, 7),1,0,2,0,3,0,4,0,5,1,6,2,0),
+1 , CASE( MOD( DATEVALUE(CreatedDate) - Appointment_Date_Entered__c, 7),0,0,1,0,2,0,3,0,4,0,5,2,2),
+2 , CASE( MOD( DATEVALUE(CreatedDate) - Appointment_Date_Entered__c, 7),0,0,1,0,2,0,3,1,2),
+3 , CASE( MOD( DATEVALUE(CreatedDate) - Appointment_Date_Entered__c, 7),0,0,1,0,2,1,2),
+4 , CASE( MOD( DATEVALUE(CreatedDate) - Appointment_Date_Entered__c, 7),0,0,1,1,2),
+5 , CASE( MOD( DATEVALUE(CreatedDate) - Appointment_Date_Entered__c, 7),0,1,2),
+6 , CASE( MOD( DATEVALUE(CreatedDate) - Appointment_Date_Entered__c, 7),6,2,1),
+999)
++
+(FLOOR((Appointment_Date__c) - (DATEVALUE(CreatedDate)))/7)*2)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label># Days Until Patient Seen</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Declined_Castlight_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Declined Castlight Reason</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <controllingField>Castlight__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Availability</fullName>
+                    <default>false</default>
+                    <label>Availability</label>
+                </value>
+                <value>
+                    <fullName>Contact Data Incorrect</fullName>
+                    <default>false</default>
+                    <label>Contact Data Incorrect</label>
+                </value>
+                <value>
+                    <fullName>Established relationship</fullName>
+                    <default>false</default>
+                    <label>Established relationship</label>
+                </value>
+                <value>
+                    <fullName>Location/Distance</fullName>
+                    <default>false</default>
+                    <label>Location/Distance</label>
+                </value>
+                <value>
+                    <fullName>Non-Amazon Benefits</fullName>
+                    <default>false</default>
+                    <label>Non-Amazon Benefits</label>
+                </value>
+                <value>
+                    <fullName>Patient preference</fullName>
+                    <default>false</default>
+                    <label>Patient preference</label>
+                </value>
+                <value>
+                    <fullName>Pilot Ended</fullName>
+                    <default>false</default>
+                    <label>Pilot Ended</label>
+                </value>
+                <value>
+                    <fullName>Poor Patient Reviews</fullName>
+                    <default>false</default>
+                    <label>Poor Patient Reviews</label>
+                </value>
+                <value>
+                    <fullName>Provider has incorrect contact info</fullName>
+                    <default>false</default>
+                    <label>Provider has incorrect contact info</label>
+                </value>
+                <value>
+                    <fullName>Provider preference</fullName>
+                    <default>false</default>
+                    <label>Provider preference</label>
+                </value>
+                <value>
+                    <fullName>Specialty Services Incorrect</fullName>
+                    <default>false</default>
+                    <label>Specialty Services Incorrect</label>
+                </value>
+                <value>
+                    <fullName>Specialty too broad</fullName>
+                    <default>false</default>
+                    <label>Specialty too broad</label>
+                </value>
+                <value>
+                    <fullName>Uninsured</fullName>
+                    <default>false</default>
+                    <label>Uninsured</label>
+                </value>
+                <value>
+                    <fullName>Amino Recommendation</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Amino Recommendation</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Declined</controllingFieldValue>
+                <valueName>Availability</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Declined</controllingFieldValue>
+                <valueName>Contact Data Incorrect</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Declined</controllingFieldValue>
+                <valueName>Established relationship</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Declined</controllingFieldValue>
+                <valueName>Location/Distance</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Declined</controllingFieldValue>
+                <valueName>Non-Amazon Benefits</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Declined</controllingFieldValue>
+                <valueName>Patient preference</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Declined</controllingFieldValue>
+                <valueName>Pilot Ended</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Declined</controllingFieldValue>
+                <valueName>Poor Patient Reviews</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Declined</controllingFieldValue>
+                <valueName>Provider has incorrect contact info</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Declined</controllingFieldValue>
+                <valueName>Provider preference</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Declined</controllingFieldValue>
+                <valueName>Specialty Services Incorrect</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Declined</controllingFieldValue>
+                <valueName>Specialty too broad</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Declined</controllingFieldValue>
+                <valueName>Uninsured</valueName>
+            </valueSettings>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Diagnosis__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Diagnosis entered by the Crossover team member. Requested by Sarah L for Patient Referral Management project.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the diagnosis for this Patient Referral.</inlineHelpText>
+        <label>Diagnosis</label>
+        <referenceTo>Diagnosis_Code__c</referenceTo>
+        <relationshipLabel>Patient Referrals</relationshipLabel>
+        <relationshipName>Patient_Referrals</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>EMR__c</fullName>
+        <description>Displays the value of the Patient__r.EMR__c field on the selected Patient Contact record. Requested by Sarah L for Patient Referral Management project.</description>
+        <externalId>false</externalId>
+        <formula>Patient__r.EMR__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>EMR</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Employee_Benefits_Referral__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Employee Benefits Referral</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Group_or_Institution__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>Group for the Patient Referral. Requested by Sarah L for Patient Referral Management project.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Group referred for this Patient Referral.</inlineHelpText>
+        <label>Group</label>
+        <referenceTo>Location__c</referenceTo>
+        <relationshipLabel>Referrals</relationshipLabel>
+        <relationshipName>Group_or_Institution</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>In_network__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>In-network</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Closed__c</fullName>
+        <description>Signifies that the Patient Referral is in a &apos;Closed&apos; Status.</description>
+        <externalId>false</externalId>
+        <formula>NOT(ISPICKVAL(Status__c, &apos;Open&apos;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is Closed</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Online_Ratings_Average__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Online ratings average on a scale of 1 to 5 stars.</inlineHelpText>
+        <label>Online Ratings Average</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                    <label>1</label>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                    <label>2</label>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                    <label>3</label>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                    <label>4</label>
+                </value>
+                <value>
+                    <fullName>5</fullName>
+                    <default>false</default>
+                    <label>5</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Patient__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>Patient Contact associated with the Patient Referral. Requested by Sarah L for Patient Referral Management project.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the Patient Contact associated with this Patient Referral.</inlineHelpText>
+        <label>Patient</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Contact.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Patient</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Patient Referrals</relationshipLabel>
+        <relationshipName>Patient_Referrals</relationshipName>
+        <required>true</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Preferred_Payment_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Preferred Payment Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Amazon health plan</fullName>
+                    <default>false</default>
+                    <label>Amazon health plan</label>
+                </value>
+                <value>
+                    <fullName>Kaiser</fullName>
+                    <default>false</default>
+                    <label>Kaiser</label>
+                </value>
+                <value>
+                    <fullName>MSFT HCP inside EHN</fullName>
+                    <default>false</default>
+                    <label>MSFT HCP inside EHN</label>
+                </value>
+                <value>
+                    <fullName>MSFT HCP outside EHN</fullName>
+                    <default>false</default>
+                    <label>MSFT HCP outside EHN</label>
+                </value>
+                <value>
+                    <fullName>MSFT HCP outside EHN and outside HCP</fullName>
+                    <default>false</default>
+                    <label>MSFT HCP outside EHN and outside HCP</label>
+                </value>
+                <value>
+                    <fullName>MSFT Kaiser</fullName>
+                    <default>false</default>
+                    <label>MSFT Kaiser</label>
+                </value>
+                <value>
+                    <fullName>MSFT Premera HSP</fullName>
+                    <default>false</default>
+                    <label>MSFT Premera HSP</label>
+                </value>
+                <value>
+                    <fullName>Non-Amazon health plan</fullName>
+                    <default>false</default>
+                    <label>Non-Amazon health plan</label>
+                </value>
+                <value>
+                    <fullName>Opting out of Amazon health plan (self-pay)</fullName>
+                    <default>false</default>
+                    <label>Opting out of Amazon health plan (self-pay)</label>
+                </value>
+                <value>
+                    <fullName>High deductible - Opt out of Amazon benefits</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>High deductible - Opt out of Amazon benefits</label>
+                </value>
+                <value>
+                    <fullName>Non-Amazon benefits</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Non-Amazon benefits</label>
+                </value>
+                <value>
+                    <fullName>Self-pay</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Self-pay</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Provider_Specified__c</fullName>
+        <description>Signifies that the patient requested a specific Provider. Requested by Sarah L for Patient Referral Management project.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select if the patient requested a specific Provider.</inlineHelpText>
+        <label>Provider Specified</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Patient Specified</fullName>
+                    <default>false</default>
+                    <label>Patient Specified</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Pt_Declined_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Declined Reason</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Pt_Declined__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Declined Amino</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Referral_Count__c</fullName>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Referral Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Report_Received__c</fullName>
+        <description>Date the consultation report was obtained for the Patient Referral. Requested by Sarah L for Patient Referral Management project.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the date the consultation report was obtained for this Patient Referral.</inlineHelpText>
+        <label>Report Received</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Request_Date__c</fullName>
+        <defaultValue>TODAY()</defaultValue>
+        <description>Date the Patient Referral was created. Requested by Sarah L for Patient Referral Management project.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date this Patient Referral was created.</inlineHelpText>
+        <label>Request Date</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Scheduled_by_CN__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Scheduled by CN</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Sent_to_Patient__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Sent to Patient</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Specialist_NPI__c</fullName>
+        <externalId>false</externalId>
+        <formula>Specialist__r.NPI__c</formula>
+        <inlineHelpText>The specialist&apos;s NPI number is pulled from the specialist record.</inlineHelpText>
+        <label>Specialist NPI</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Specialist_Survey_Sent__c</fullName>
+        <description>Date the survey was sent to the Patient selected for the Patient Referral. Requested by Sarah L for Patient Referral Management project.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the date the survey was sent for this Patient Referral.</inlineHelpText>
+        <label>Specialist Survey Sent</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Specialist__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>Specialist referred for the Patient Referral. Requested by Sarah L for Patient Referral Management project.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the Specialist referred for this Patient Referral.</inlineHelpText>
+        <label>Specialist</label>
+        <referenceTo>Specialist__c</referenceTo>
+        <relationshipLabel>Patient Referrals</relationshipLabel>
+        <relationshipName>Patient_Referrals</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Specialty__c</fullName>
+        <externalId>false</externalId>
+        <label>Specialty</label>
+        <required>true</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Specialty_List</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Status_Detail_Open_Kanban__c</fullName>
+        <externalId>false</externalId>
+        <label>Status Detail Open Kanban</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Pending</fullName>
+                    <default>false</default>
+                    <label>Pending</label>
+                </value>
+                <value>
+                    <fullName>Report Requested</fullName>
+                    <default>false</default>
+                    <label>Report Requested</label>
+                </value>
+                <value>
+                    <fullName>Scheduled</fullName>
+                    <default>false</default>
+                    <label>Scheduled</label>
+                </value>
+                <value>
+                    <fullName>Unscheduled</fullName>
+                    <default>false</default>
+                    <label>Unscheduled</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Status_Detail__c</fullName>
+        <externalId>false</externalId>
+        <label>Status Detail</label>
+        <required>true</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Status__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Canceled</fullName>
+                    <default>false</default>
+                    <label>Canceled</label>
+                </value>
+                <value>
+                    <fullName>Cost</fullName>
+                    <default>false</default>
+                    <label>Cost</label>
+                </value>
+                <value>
+                    <fullName>Declined</fullName>
+                    <default>false</default>
+                    <label>Declined</label>
+                </value>
+                <value>
+                    <fullName>No Report Received- No Survey Sent</fullName>
+                    <default>false</default>
+                    <label>No Report Received- No Survey Sent</label>
+                </value>
+                <value>
+                    <fullName>No Report Received- Survey Sent</fullName>
+                    <default>false</default>
+                    <label>No Report Received- Survey Sent</label>
+                </value>
+                <value>
+                    <fullName>No Show</fullName>
+                    <default>false</default>
+                    <label>No Show</label>
+                </value>
+                <value>
+                    <fullName>Pending</fullName>
+                    <default>false</default>
+                    <label>Pending</label>
+                </value>
+                <value>
+                    <fullName>Referral Options Provided</fullName>
+                    <default>false</default>
+                    <label>Referral Options Provided</label>
+                </value>
+                <value>
+                    <fullName>Ref Receipt - Established Care</fullName>
+                    <default>false</default>
+                    <label>Ref Receipt - Established Care</label>
+                </value>
+                <value>
+                    <fullName>Report Received - No Survey Sent</fullName>
+                    <default>false</default>
+                    <label>Report Received - No Survey Sent</label>
+                </value>
+                <value>
+                    <fullName>Report Received - Survey Sent</fullName>
+                    <default>false</default>
+                    <label>Report Received - Survey Sent</label>
+                </value>
+                <value>
+                    <fullName>Report Requested</fullName>
+                    <default>false</default>
+                    <label>Report Requested</label>
+                </value>
+                <value>
+                    <fullName>Scheduled</fullName>
+                    <default>false</default>
+                    <label>Scheduled</label>
+                </value>
+                <value>
+                    <fullName>Unhappy - Reroute</fullName>
+                    <default>false</default>
+                    <label>Unhappy - Reroute</label>
+                </value>
+                <value>
+                    <fullName>Unresponsive</fullName>
+                    <default>false</default>
+                    <label>Unresponsive</label>
+                </value>
+                <value>
+                    <fullName>Unscheduled</fullName>
+                    <default>false</default>
+                    <label>Unscheduled</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Duplicate</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Duplicate</label>
+                </value>
+                <value>
+                    <fullName>Expired</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Expired</label>
+                </value>
+                <value>
+                    <fullName>Incorrect</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Incorrect</label>
+                </value>
+                <value>
+                    <fullName>No Notes</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>No Notes</label>
+                </value>
+                <value>
+                    <fullName>Patient Declined</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Patient Declined</label>
+                </value>
+                <value>
+                    <fullName>Pending Additional Notes</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Pending Additional Notes</label>
+                </value>
+                <value>
+                    <fullName>Pending Location Preference</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Pending Location Preference</label>
+                </value>
+                <value>
+                    <fullName>Pending Provider Instruction</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Pending Provider Instruction</label>
+                </value>
+                <value>
+                    <fullName>Reroute</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Reroute</label>
+                </value>
+                <value>
+                    <fullName>Scheduled w/ Different Specialist</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Scheduled w/ Different Specialist</label>
+                </value>
+                <value>
+                    <fullName>Unresponvie</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Unresponvie</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Open</controllingFieldValue>
+                <valueName>Pending</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Open</controllingFieldValue>
+                <valueName>Report Requested</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Open</controllingFieldValue>
+                <valueName>Scheduled</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Open</controllingFieldValue>
+                <valueName>Unscheduled</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Closed</controllingFieldValue>
+                <valueName>No Report Received- No Survey Sent</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Closed</controllingFieldValue>
+                <valueName>No Report Received- Survey Sent</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Closed</controllingFieldValue>
+                <valueName>Referral Options Provided</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Closed</controllingFieldValue>
+                <valueName>Ref Receipt - Established Care</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Closed</controllingFieldValue>
+                <valueName>Report Received - No Survey Sent</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Closed</controllingFieldValue>
+                <valueName>Report Received - Survey Sent</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Inactive</controllingFieldValue>
+                <valueName>Canceled</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Inactive</controllingFieldValue>
+                <valueName>Cost</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Inactive</controllingFieldValue>
+                <valueName>Declined</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Inactive</controllingFieldValue>
+                <valueName>No Show</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Inactive</controllingFieldValue>
+                <valueName>Unhappy - Reroute</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Inactive</controllingFieldValue>
+                <valueName>Unresponsive</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Inactive</controllingFieldValue>
+                <valueName>Other</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>true</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Open</fullName>
+                    <color>#0B6FCE</color>
+                    <default>true</default>
+                    <label>Open</label>
+                </value>
+                <value>
+                    <fullName>Closed</fullName>
+                    <color>#419249</color>
+                    <default>false</default>
+                    <label>Closed</label>
+                </value>
+                <value>
+                    <fullName>Inactive</fullName>
+                    <color>#666666</color>
+                    <default>false</default>
+                    <label>Inactive</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Subspecialty__c</fullName>
+        <externalId>false</externalId>
+        <label>Subspecialty</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Specialty__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Addiction Psychiatry</fullName>
+                    <default>false</default>
+                    <label>Addiction Psychiatry</label>
+                </value>
+                <value>
+                    <fullName>Ankle and Foot</fullName>
+                    <default>false</default>
+                    <label>Ankle and Foot</label>
+                </value>
+                <value>
+                    <fullName>Arthroscopy</fullName>
+                    <default>false</default>
+                    <label>Arthroscopy</label>
+                </value>
+                <value>
+                    <fullName>Barium Swallow</fullName>
+                    <default>false</default>
+                    <label>Barium Swallow</label>
+                </value>
+                <value>
+                    <fullName>Battered Women&apos;s Shelters</fullName>
+                    <default>false</default>
+                    <label>Battered Women&apos;s Shelters</label>
+                </value>
+                <value>
+                    <fullName>Binocular Vision</fullName>
+                    <default>false</default>
+                    <label>Binocular Vision</label>
+                </value>
+                <value>
+                    <fullName>Breast Biopsy</fullName>
+                    <default>false</default>
+                    <label>Breast Biopsy</label>
+                </value>
+                <value>
+                    <fullName>Breast Lump Fast Track</fullName>
+                    <default>false</default>
+                    <label>Breast Lump Fast Track</label>
+                </value>
+                <value>
+                    <fullName>CAC</fullName>
+                    <default>false</default>
+                    <label>CAC</label>
+                </value>
+                <value>
+                    <fullName>Cardiac Testing Fast Track</fullName>
+                    <default>false</default>
+                    <label>Cardiac Testing Fast Track</label>
+                </value>
+                <value>
+                    <fullName>Cataract Surgery</fullName>
+                    <default>false</default>
+                    <label>Cataract Surgery</label>
+                </value>
+                <value>
+                    <fullName>Child/Elder Care</fullName>
+                    <default>false</default>
+                    <label>Child/Elder Care</label>
+                </value>
+                <value>
+                    <fullName>Chiropractic</fullName>
+                    <default>false</default>
+                    <label>Chiropractic</label>
+                </value>
+                <value>
+                    <fullName>Clothing</fullName>
+                    <default>false</default>
+                    <label>Clothing</label>
+                </value>
+                <value>
+                    <fullName>Colonoscopy</fullName>
+                    <default>false</default>
+                    <label>Colonoscopy</label>
+                </value>
+                <value>
+                    <fullName>Colorguard at Home Kit</fullName>
+                    <default>false</default>
+                    <label>Colorguard at Home Kit</label>
+                </value>
+                <value>
+                    <fullName>Community Resources</fullName>
+                    <default>false</default>
+                    <label>Community Resources</label>
+                </value>
+                <value>
+                    <fullName>Cornea</fullName>
+                    <default>false</default>
+                    <label>Cornea</label>
+                </value>
+                <value>
+                    <fullName>Coronary Artery Calcium Score</fullName>
+                    <default>false</default>
+                    <label>Coronary Artery Calcium Score</label>
+                </value>
+                <value>
+                    <fullName>Cosmetic</fullName>
+                    <default>false</default>
+                    <label>Cosmetic</label>
+                </value>
+                <value>
+                    <fullName>COVID-19/Disaster Relief</fullName>
+                    <default>false</default>
+                    <label>COVID-19/Disaster Relief</label>
+                </value>
+                <value>
+                    <fullName>COVID-19 Vaccine</fullName>
+                    <default>false</default>
+                    <label>COVID-19 Vaccine</label>
+                </value>
+                <value>
+                    <fullName>CT</fullName>
+                    <default>false</default>
+                    <label>CT</label>
+                </value>
+                <value>
+                    <fullName>Dermatopathology</fullName>
+                    <default>false</default>
+                    <label>Dermatopathology</label>
+                </value>
+                <value>
+                    <fullName>DEXA</fullName>
+                    <default>false</default>
+                    <label>DEXA</label>
+                </value>
+                <value>
+                    <fullName>Diabetes</fullName>
+                    <default>false</default>
+                    <label>Diabetes</label>
+                </value>
+                <value>
+                    <fullName>Diabetes Education</fullName>
+                    <default>false</default>
+                    <label>Diabetes Education</label>
+                </value>
+                <value>
+                    <fullName>Echocardiogram</fullName>
+                    <default>false</default>
+                    <label>Echocardiogram</label>
+                </value>
+                <value>
+                    <fullName>Elbow</fullName>
+                    <default>false</default>
+                    <label>Elbow</label>
+                </value>
+                <value>
+                    <fullName>Emergency Assistance</fullName>
+                    <default>false</default>
+                    <label>Emergency Assistance</label>
+                </value>
+                <value>
+                    <fullName>Employment Assistance</fullName>
+                    <default>false</default>
+                    <label>Employment Assistance</label>
+                </value>
+                <value>
+                    <fullName>FDG-PET</fullName>
+                    <default>false</default>
+                    <label>FDG-PET</label>
+                </value>
+                <value>
+                    <fullName>Female</fullName>
+                    <default>false</default>
+                    <label>Female</label>
+                </value>
+                <value>
+                    <fullName>Financial Planning</fullName>
+                    <default>false</default>
+                    <label>Financial Planning</label>
+                </value>
+                <value>
+                    <fullName>Food Pantries</fullName>
+                    <default>false</default>
+                    <label>Food Pantries</label>
+                </value>
+                <value>
+                    <fullName>General</fullName>
+                    <default>false</default>
+                    <label>General</label>
+                </value>
+                <value>
+                    <fullName>Genetic Testing</fullName>
+                    <default>false</default>
+                    <label>Genetic Testing</label>
+                </value>
+                <value>
+                    <fullName>Glaucoma</fullName>
+                    <default>false</default>
+                    <label>Glaucoma</label>
+                </value>
+                <value>
+                    <fullName>Gynecologic Oncology</fullName>
+                    <default>false</default>
+                    <label>Gynecologic Oncology</label>
+                </value>
+                <value>
+                    <fullName>Gynecology</fullName>
+                    <default>false</default>
+                    <label>Gynecology</label>
+                </value>
+                <value>
+                    <fullName>Hematology Oncology</fullName>
+                    <default>false</default>
+                    <label>Hematology Oncology</label>
+                </value>
+                <value>
+                    <fullName>Hepatitis A Vaccine</fullName>
+                    <default>false</default>
+                    <label>Hepatitis A Vaccine</label>
+                </value>
+                <value>
+                    <fullName>Hepatitis B Vaccine</fullName>
+                    <default>false</default>
+                    <label>Hepatitis B Vaccine</label>
+                </value>
+                <value>
+                    <fullName>Hepatology</fullName>
+                    <default>false</default>
+                    <label>Hepatology</label>
+                </value>
+                <value>
+                    <fullName>Hernia Specialist</fullName>
+                    <default>false</default>
+                    <label>Hernia Specialist</label>
+                </value>
+                <value>
+                    <fullName>Hip</fullName>
+                    <default>false</default>
+                    <label>Hip</label>
+                </value>
+                <value>
+                    <fullName>Housing Assistance</fullName>
+                    <default>false</default>
+                    <label>Housing Assistance</label>
+                </value>
+                <value>
+                    <fullName>HPV Vaccine (Human Papillomavirus)</fullName>
+                    <default>false</default>
+                    <label>HPV Vaccine (Human Papillomavirus)</label>
+                </value>
+                <value>
+                    <fullName>Infertility</fullName>
+                    <default>false</default>
+                    <label>Infertility</label>
+                </value>
+                <value>
+                    <fullName>Influenza (Flu)</fullName>
+                    <default>false</default>
+                    <label>Influenza (Flu)</label>
+                </value>
+                <value>
+                    <fullName>In Vitro</fullName>
+                    <default>false</default>
+                    <label>In Vitro</label>
+                </value>
+                <value>
+                    <fullName>IOP</fullName>
+                    <default>false</default>
+                    <label>IOP</label>
+                </value>
+                <value>
+                    <fullName>Iron Infusion</fullName>
+                    <default>false</default>
+                    <label>Iron Infusion</label>
+                </value>
+                <value>
+                    <fullName>Knee</fullName>
+                    <default>false</default>
+                    <label>Knee</label>
+                </value>
+                <value>
+                    <fullName>Legal Aid</fullName>
+                    <default>false</default>
+                    <label>Legal Aid</label>
+                </value>
+                <value>
+                    <fullName>Lipid Disorders</fullName>
+                    <default>false</default>
+                    <label>Lipid Disorders</label>
+                </value>
+                <value>
+                    <fullName>Male</fullName>
+                    <default>false</default>
+                    <label>Male</label>
+                </value>
+                <value>
+                    <fullName>Mammo</fullName>
+                    <default>false</default>
+                    <label>Mammo</label>
+                </value>
+                <value>
+                    <fullName>Maternal Fetal Medicine</fullName>
+                    <default>false</default>
+                    <label>Maternal Fetal Medicine</label>
+                </value>
+                <value>
+                    <fullName>Measles, Mumps and Rubella (MMR)</fullName>
+                    <default>false</default>
+                    <label>Measles, Mumps and Rubella (MMR)</label>
+                </value>
+                <value>
+                    <fullName>MEDICAID Assistance</fullName>
+                    <default>false</default>
+                    <label>MEDICAID Assistance</label>
+                </value>
+                <value>
+                    <fullName>Medical Assistance</fullName>
+                    <default>false</default>
+                    <label>Medical Assistance</label>
+                </value>
+                <value>
+                    <fullName>Mental Health</fullName>
+                    <default>false</default>
+                    <label>Mental Health</label>
+                </value>
+                <value>
+                    <fullName>MOHS Surgery</fullName>
+                    <default>false</default>
+                    <label>MOHS Surgery</label>
+                </value>
+                <value>
+                    <fullName>MRA</fullName>
+                    <default>false</default>
+                    <label>MRA</label>
+                </value>
+                <value>
+                    <fullName>MRI</fullName>
+                    <default>false</default>
+                    <label>MRI</label>
+                </value>
+                <value>
+                    <fullName>Neuro-Ophthalmology</fullName>
+                    <default>false</default>
+                    <label>Neuro-Ophthalmology</label>
+                </value>
+                <value>
+                    <fullName>Neuropsychiatry</fullName>
+                    <default>false</default>
+                    <label>Neuropsychiatry</label>
+                </value>
+                <value>
+                    <fullName>Neurosurgery</fullName>
+                    <default>false</default>
+                    <label>Neurosurgery</label>
+                </value>
+                <value>
+                    <fullName>Obstetrics</fullName>
+                    <default>false</default>
+                    <label>Obstetrics</label>
+                </value>
+                <value>
+                    <fullName>Oculoplastics</fullName>
+                    <default>false</default>
+                    <label>Oculoplastics</label>
+                </value>
+                <value>
+                    <fullName>Oncology</fullName>
+                    <default>false</default>
+                    <label>Oncology</label>
+                </value>
+                <value>
+                    <fullName>Pain Management</fullName>
+                    <default>false</default>
+                    <label>Pain Management</label>
+                </value>
+                <value>
+                    <fullName>Parenting, Pregnancy, &amp; Adoption</fullName>
+                    <default>false</default>
+                    <label>Parenting, Pregnancy, &amp; Adoption</label>
+                </value>
+                <value>
+                    <fullName>Patch Testing (Derm or Allergy)</fullName>
+                    <default>false</default>
+                    <label>Patch Testing (Derm or Allergy)</label>
+                </value>
+                <value>
+                    <fullName>Pelvic Health &amp; Rehabilitation</fullName>
+                    <default>false</default>
+                    <label>Pelvic Health &amp; Rehabilitation</label>
+                </value>
+                <value>
+                    <fullName>Periodontics</fullName>
+                    <default>false</default>
+                    <label>Periodontics</label>
+                </value>
+                <value>
+                    <fullName>Personal Care items/services</fullName>
+                    <default>false</default>
+                    <label>Personal Care items/services</label>
+                </value>
+                <value>
+                    <fullName>Physical Therapy</fullName>
+                    <default>false</default>
+                    <label>Physical Therapy</label>
+                </value>
+                <value>
+                    <fullName>Plastic</fullName>
+                    <default>false</default>
+                    <label>Plastic</label>
+                </value>
+                <value>
+                    <fullName>Prosthodontics</fullName>
+                    <default>false</default>
+                    <label>Prosthodontics</label>
+                </value>
+                <value>
+                    <fullName>Psychotherapy</fullName>
+                    <default>false</default>
+                    <label>Psychotherapy</label>
+                </value>
+                <value>
+                    <fullName>Radionuclear Thyroid Scan</fullName>
+                    <default>false</default>
+                    <label>Radionuclear Thyroid Scan</label>
+                </value>
+                <value>
+                    <fullName>Radionuclide Bone Scan</fullName>
+                    <default>false</default>
+                    <label>Radionuclide Bone Scan</label>
+                </value>
+                <value>
+                    <fullName>Refractive Surgery</fullName>
+                    <default>false</default>
+                    <label>Refractive Surgery</label>
+                </value>
+                <value>
+                    <fullName>Refugee Services</fullName>
+                    <default>false</default>
+                    <label>Refugee Services</label>
+                </value>
+                <value>
+                    <fullName>Reproductive</fullName>
+                    <default>false</default>
+                    <label>Reproductive</label>
+                </value>
+                <value>
+                    <fullName>Reproductive Endocrinology</fullName>
+                    <default>false</default>
+                    <label>Reproductive Endocrinology</label>
+                </value>
+                <value>
+                    <fullName>Reproductive Endocrinology and Infertility</fullName>
+                    <default>false</default>
+                    <label>Reproductive Endocrinology and Infertility</label>
+                </value>
+                <value>
+                    <fullName>Retina</fullName>
+                    <default>false</default>
+                    <label>Retina</label>
+                </value>
+                <value>
+                    <fullName>School Success Services</fullName>
+                    <default>false</default>
+                    <label>School Success Services</label>
+                </value>
+                <value>
+                    <fullName>Senior Services</fullName>
+                    <default>false</default>
+                    <label>Senior Services</label>
+                </value>
+                <value>
+                    <fullName>Shingles (Shingrix)</fullName>
+                    <default>false</default>
+                    <label>Shingles (Shingrix)</label>
+                </value>
+                <value>
+                    <fullName>Shoulder</fullName>
+                    <default>false</default>
+                    <label>Shoulder</label>
+                </value>
+                <value>
+                    <fullName>Smoking Cessation</fullName>
+                    <default>false</default>
+                    <label>Smoking Cessation</label>
+                </value>
+                <value>
+                    <fullName>Sonogram</fullName>
+                    <default>false</default>
+                    <label>Sonogram</label>
+                </value>
+                <value>
+                    <fullName>Spine</fullName>
+                    <default>false</default>
+                    <label>Spine</label>
+                </value>
+                <value>
+                    <fullName>Subclinical</fullName>
+                    <default>false</default>
+                    <label>Subclinical</label>
+                </value>
+                <value>
+                    <fullName>Surgery</fullName>
+                    <default>false</default>
+                    <label>Surgery</label>
+                </value>
+                <value>
+                    <fullName>Tetanus Dipthera Pertussis (Tdap)</fullName>
+                    <default>false</default>
+                    <label>Tetanus Dipthera Pertussis (Tdap)</label>
+                </value>
+                <value>
+                    <fullName>Thyroid</fullName>
+                    <default>false</default>
+                    <label>Thyroid</label>
+                </value>
+                <value>
+                    <fullName>TMJ Specialist</fullName>
+                    <default>false</default>
+                    <label>TMJ Specialist</label>
+                </value>
+                <value>
+                    <fullName>Transportation</fullName>
+                    <default>false</default>
+                    <label>Transportation</label>
+                </value>
+                <value>
+                    <fullName>Urogynecology/Reconstructive Pelvic Surgery</fullName>
+                    <default>false</default>
+                    <label>Urogynecology/Reconstructive Pelvic Surgery</label>
+                </value>
+                <value>
+                    <fullName>US</fullName>
+                    <default>false</default>
+                    <label>US</label>
+                </value>
+                <value>
+                    <fullName>Utilities</fullName>
+                    <default>false</default>
+                    <label>Utilities</label>
+                </value>
+                <value>
+                    <fullName>Varicella (Chicken Pox)</fullName>
+                    <default>false</default>
+                    <label>Varicella (Chicken Pox)</label>
+                </value>
+                <value>
+                    <fullName>Veteran Assistance</fullName>
+                    <default>false</default>
+                    <label>Veteran Assistance</label>
+                </value>
+                <value>
+                    <fullName>Worker&apos;s Comp - Coventry</fullName>
+                    <default>false</default>
+                    <label>Worker&apos;s Comp</label>
+                </value>
+                <value>
+                    <fullName>Wrist and Hand</fullName>
+                    <default>false</default>
+                    <label>Wrist and Hand</label>
+                </value>
+                <value>
+                    <fullName>Xray</fullName>
+                    <default>false</default>
+                    <label>Xray</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Psychiatry</controllingFieldValue>
+                <valueName>Addiction Psychiatry</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Psychiatry</controllingFieldValue>
+                <controllingFieldValue>Psychology</controllingFieldValue>
+                <controllingFieldValue>Pulmonology</controllingFieldValue>
+                <controllingFieldValue>Rheumatology</controllingFieldValue>
+                <controllingFieldValue>Sexual Addiction Therapy</controllingFieldValue>
+                <controllingFieldValue>Sleep Medicine</controllingFieldValue>
+                <controllingFieldValue>Speech Pathology</controllingFieldValue>
+                <controllingFieldValue>Sports Medicine</controllingFieldValue>
+                <controllingFieldValue>Therapeutic Massage</controllingFieldValue>
+                <controllingFieldValue>Diabetes Care/Education</controllingFieldValue>
+                <controllingFieldValue>Toxicology</controllingFieldValue>
+                <controllingFieldValue>Dietetics</controllingFieldValue>
+                <controllingFieldValue>Transgender Care</controllingFieldValue>
+                <controllingFieldValue>Eating Disorders</controllingFieldValue>
+                <controllingFieldValue>Travel Medicine</controllingFieldValue>
+                <controllingFieldValue>Endocrinology</controllingFieldValue>
+                <controllingFieldValue>Urology</controllingFieldValue>
+                <controllingFieldValue>Fertility</controllingFieldValue>
+                <controllingFieldValue>Vascular Medicine</controllingFieldValue>
+                <controllingFieldValue>Functional Medicine</controllingFieldValue>
+                <controllingFieldValue>Wound Care</controllingFieldValue>
+                <controllingFieldValue>Gastroenterology</controllingFieldValue>
+                <controllingFieldValue>General Surgery</controllingFieldValue>
+                <controllingFieldValue>Genetics</controllingFieldValue>
+                <controllingFieldValue>Hematology</controllingFieldValue>
+                <controllingFieldValue>Allergy, Asthma, &amp; Immunology</controllingFieldValue>
+                <controllingFieldValue>Audiology</controllingFieldValue>
+                <controllingFieldValue>Bariatrics</controllingFieldValue>
+                <controllingFieldValue>Breast Care</controllingFieldValue>
+                <controllingFieldValue>Cardiology</controllingFieldValue>
+                <controllingFieldValue>Chemical Dependency</controllingFieldValue>
+                <controllingFieldValue>Colon and Rectal Surgery</controllingFieldValue>
+                <controllingFieldValue>Dentistry</controllingFieldValue>
+                <controllingFieldValue>Dermatology</controllingFieldValue>
+                <controllingFieldValue>Imaging</controllingFieldValue>
+                <controllingFieldValue>Infectious Disease</controllingFieldValue>
+                <controllingFieldValue>Acupuncture</controllingFieldValue>
+                <controllingFieldValue>Internal Medicine</controllingFieldValue>
+                <controllingFieldValue>Marriage Counseling</controllingFieldValue>
+                <controllingFieldValue>Midwifery</controllingFieldValue>
+                <controllingFieldValue>Naturopathic Medicine</controllingFieldValue>
+                <controllingFieldValue>Nephrology</controllingFieldValue>
+                <controllingFieldValue>Neurology</controllingFieldValue>
+                <controllingFieldValue>Nuclear Medicine</controllingFieldValue>
+                <controllingFieldValue>Obesity Weight Loss</controllingFieldValue>
+                <controllingFieldValue>OBGYN</controllingFieldValue>
+                <controllingFieldValue>Oncology</controllingFieldValue>
+                <controllingFieldValue>Ophthalmology</controllingFieldValue>
+                <controllingFieldValue>Optometry</controllingFieldValue>
+                <controllingFieldValue>Oral &amp; Maxillofacial</controllingFieldValue>
+                <controllingFieldValue>Orthopedics</controllingFieldValue>
+                <controllingFieldValue>Orthotics</controllingFieldValue>
+                <controllingFieldValue>Osteopathic Medicine</controllingFieldValue>
+                <controllingFieldValue>Osteoporosis Specialist</controllingFieldValue>
+                <controllingFieldValue>Otolaryngology/ENT</controllingFieldValue>
+                <controllingFieldValue>Pelvic Health &amp; Rehabilitation</controllingFieldValue>
+                <controllingFieldValue>Physiatry</controllingFieldValue>
+                <controllingFieldValue>Physical Medicine &amp; Rehabilitation</controllingFieldValue>
+                <controllingFieldValue>Podiatry</controllingFieldValue>
+                <valueName>General</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Psychiatry</controllingFieldValue>
+                <valueName>IOP</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Psychiatry</controllingFieldValue>
+                <valueName>Neuropsychiatry</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Psychiatry</controllingFieldValue>
+                <controllingFieldValue>Gynecologic Oncology</controllingFieldValue>
+                <controllingFieldValue>Psychology</controllingFieldValue>
+                <controllingFieldValue>Hematology Oncology</controllingFieldValue>
+                <controllingFieldValue>Pulmonology</controllingFieldValue>
+                <controllingFieldValue>Rheumatology</controllingFieldValue>
+                <controllingFieldValue>Sexual Addiction Therapy</controllingFieldValue>
+                <controllingFieldValue>Massage Therapy</controllingFieldValue>
+                <controllingFieldValue>Vasectomy</controllingFieldValue>
+                <controllingFieldValue>Mental Health</controllingFieldValue>
+                <controllingFieldValue>Anesthesiology</controllingFieldValue>
+                <controllingFieldValue>Sleep Medicine</controllingFieldValue>
+                <controllingFieldValue>Thoracic Surgery</controllingFieldValue>
+                <controllingFieldValue>Speech Pathology</controllingFieldValue>
+                <controllingFieldValue>Urgent Care</controllingFieldValue>
+                <controllingFieldValue>Sports Medicine</controllingFieldValue>
+                <controllingFieldValue>Contact Dermatitis</controllingFieldValue>
+                <controllingFieldValue>Therapeutic Massage</controllingFieldValue>
+                <controllingFieldValue>Nutrition</controllingFieldValue>
+                <controllingFieldValue>Diabetes Care/Education</controllingFieldValue>
+                <controllingFieldValue>Toxicology</controllingFieldValue>
+                <controllingFieldValue>Hepatology</controllingFieldValue>
+                <controllingFieldValue>Dietetics</controllingFieldValue>
+                <controllingFieldValue>Transgender Care</controllingFieldValue>
+                <controllingFieldValue>Eating Disorders</controllingFieldValue>
+                <controllingFieldValue>Travel Medicine</controllingFieldValue>
+                <controllingFieldValue>Endocrinology</controllingFieldValue>
+                <controllingFieldValue>Urology</controllingFieldValue>
+                <controllingFieldValue>Fertility</controllingFieldValue>
+                <controllingFieldValue>Vascular Medicine</controllingFieldValue>
+                <controllingFieldValue>Functional Medicine</controllingFieldValue>
+                <controllingFieldValue>Wound Care</controllingFieldValue>
+                <controllingFieldValue>Gastroenterology</controllingFieldValue>
+                <controllingFieldValue>General Surgery</controllingFieldValue>
+                <controllingFieldValue>Genetics</controllingFieldValue>
+                <controllingFieldValue>Hematology</controllingFieldValue>
+                <controllingFieldValue>Allergy, Asthma, &amp; Immunology</controllingFieldValue>
+                <controllingFieldValue>Audiology</controllingFieldValue>
+                <controllingFieldValue>Bariatrics</controllingFieldValue>
+                <controllingFieldValue>Breast Care</controllingFieldValue>
+                <controllingFieldValue>Cardiology</controllingFieldValue>
+                <controllingFieldValue>Chemical Dependency</controllingFieldValue>
+                <controllingFieldValue>Colon and Rectal Surgery</controllingFieldValue>
+                <controllingFieldValue>Dentistry</controllingFieldValue>
+                <controllingFieldValue>Dermatology</controllingFieldValue>
+                <controllingFieldValue>Plastic Surgery</controllingFieldValue>
+                <controllingFieldValue>Emergency</controllingFieldValue>
+                <controllingFieldValue>PrEP Assistance Progam</controllingFieldValue>
+                <controllingFieldValue>Imaging</controllingFieldValue>
+                <controllingFieldValue>Infectious Disease</controllingFieldValue>
+                <controllingFieldValue>Acupuncture</controllingFieldValue>
+                <controllingFieldValue>Internal Medicine</controllingFieldValue>
+                <controllingFieldValue>COVID 19 Testing</controllingFieldValue>
+                <controllingFieldValue>Marriage Counseling</controllingFieldValue>
+                <controllingFieldValue>Chiropractic &amp; Physical Therapy</controllingFieldValue>
+                <controllingFieldValue>Midwifery</controllingFieldValue>
+                <controllingFieldValue>Pediatrics</controllingFieldValue>
+                <controllingFieldValue>Naturopathic Medicine</controllingFieldValue>
+                <controllingFieldValue>Neuropsychology</controllingFieldValue>
+                <controllingFieldValue>Nephrology</controllingFieldValue>
+                <controllingFieldValue>Neurology</controllingFieldValue>
+                <controllingFieldValue>Nuclear Medicine</controllingFieldValue>
+                <controllingFieldValue>Obesity Weight Loss</controllingFieldValue>
+                <controllingFieldValue>Vaccine</controllingFieldValue>
+                <controllingFieldValue>Colon Cancer Screening</controllingFieldValue>
+                <controllingFieldValue>Counseling</controllingFieldValue>
+                <controllingFieldValue>Resources</controllingFieldValue>
+                <controllingFieldValue>OBGYN</controllingFieldValue>
+                <controllingFieldValue>COVID Care</controllingFieldValue>
+                <controllingFieldValue>Oncology</controllingFieldValue>
+                <controllingFieldValue>Second Opinion</controllingFieldValue>
+                <controllingFieldValue>Ophthalmology</controllingFieldValue>
+                <controllingFieldValue>Lab Work</controllingFieldValue>
+                <controllingFieldValue>Optometry</controllingFieldValue>
+                <controllingFieldValue>Occupational Health</controllingFieldValue>
+                <controllingFieldValue>Oral &amp; Maxillofacial</controllingFieldValue>
+                <controllingFieldValue>Primary Care Provider</controllingFieldValue>
+                <controllingFieldValue>Orthopedics</controllingFieldValue>
+                <controllingFieldValue>24-HR Psychiatric Emergency Room</controllingFieldValue>
+                <controllingFieldValue>Orthotics</controllingFieldValue>
+                <controllingFieldValue>Osteopathic Medicine</controllingFieldValue>
+                <controllingFieldValue>Osteoporosis Specialist</controllingFieldValue>
+                <controllingFieldValue>Otolaryngology/ENT</controllingFieldValue>
+                <controllingFieldValue>Hotline</controllingFieldValue>
+                <controllingFieldValue>Domestic Violence</controllingFieldValue>
+                <controllingFieldValue>IOP</controllingFieldValue>
+                <controllingFieldValue>Pain Management</controllingFieldValue>
+                <controllingFieldValue>Pelvic Health &amp; Rehabilitation</controllingFieldValue>
+                <controllingFieldValue>Parenting Resources</controllingFieldValue>
+                <controllingFieldValue>Physiatry</controllingFieldValue>
+                <controllingFieldValue>Sexual Assault Support</controllingFieldValue>
+                <controllingFieldValue>Physical Medicine &amp; Rehabilitation</controllingFieldValue>
+                <controllingFieldValue>Support Group</controllingFieldValue>
+                <controllingFieldValue>Podiatry</controllingFieldValue>
+                <controllingFieldValue>TMS Treatments</controllingFieldValue>
+                <valueName>Worker&apos;s Comp - Coventry</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Psychology</controllingFieldValue>
+                <valueName>Psychotherapy</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Mental Health</controllingFieldValue>
+                <valueName>Subclinical</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Contact Dermatitis</controllingFieldValue>
+                <valueName>Patch Testing (Derm or Allergy)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Endocrinology</controllingFieldValue>
+                <valueName>Diabetes</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Endocrinology</controllingFieldValue>
+                <valueName>Lipid Disorders</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Endocrinology</controllingFieldValue>
+                <valueName>Reproductive</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Endocrinology</controllingFieldValue>
+                <valueName>Thyroid</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Fertility</controllingFieldValue>
+                <valueName>Female</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Fertility</controllingFieldValue>
+                <valueName>Infertility</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Fertility</controllingFieldValue>
+                <valueName>In Vitro</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Fertility</controllingFieldValue>
+                <valueName>Male</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Vascular Medicine</controllingFieldValue>
+                <controllingFieldValue>Breast Care</controllingFieldValue>
+                <valueName>Surgery</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Gastroenterology</controllingFieldValue>
+                <valueName>Colonoscopy</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Gastroenterology</controllingFieldValue>
+                <controllingFieldValue>Colon Cancer Screening</controllingFieldValue>
+                <valueName>Colorguard at Home Kit</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Gastroenterology</controllingFieldValue>
+                <valueName>Hepatology</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>General Surgery</controllingFieldValue>
+                <valueName>Hernia Specialist</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Genetics</controllingFieldValue>
+                <valueName>Genetic Testing</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Hematology</controllingFieldValue>
+                <valueName>Hematology Oncology</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Breast Care</controllingFieldValue>
+                <controllingFieldValue>Dermatology</controllingFieldValue>
+                <valueName>Plastic</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cardiology</controllingFieldValue>
+                <valueName>Cardiac Testing Fast Track</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Dentistry</controllingFieldValue>
+                <valueName>Periodontics</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Dentistry</controllingFieldValue>
+                <valueName>Prosthodontics</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Dermatology</controllingFieldValue>
+                <valueName>Cosmetic</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Dermatology</controllingFieldValue>
+                <valueName>Dermatopathology</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Dermatology</controllingFieldValue>
+                <valueName>MOHS Surgery</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Imaging</controllingFieldValue>
+                <valueName>Breast Biopsy</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Imaging</controllingFieldValue>
+                <valueName>Breast Lump Fast Track</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Imaging</controllingFieldValue>
+                <valueName>CAC</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Imaging</controllingFieldValue>
+                <valueName>CT</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Imaging</controllingFieldValue>
+                <valueName>DEXA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Imaging</controllingFieldValue>
+                <valueName>Echocardiogram</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Imaging</controllingFieldValue>
+                <controllingFieldValue>Nuclear Medicine</controllingFieldValue>
+                <valueName>FDG-PET</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Imaging</controllingFieldValue>
+                <valueName>Mammo</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Imaging</controllingFieldValue>
+                <valueName>MRA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Imaging</controllingFieldValue>
+                <valueName>MRI</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Imaging</controllingFieldValue>
+                <valueName>Sonogram</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Imaging</controllingFieldValue>
+                <valueName>US</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Imaging</controllingFieldValue>
+                <valueName>Xray</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Neurology</controllingFieldValue>
+                <valueName>Neurosurgery</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Nuclear Medicine</controllingFieldValue>
+                <valueName>Barium Swallow</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Nuclear Medicine</controllingFieldValue>
+                <valueName>Coronary Artery Calcium Score</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Nuclear Medicine</controllingFieldValue>
+                <valueName>Iron Infusion</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Nuclear Medicine</controllingFieldValue>
+                <valueName>Radionuclear Thyroid Scan</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Nuclear Medicine</controllingFieldValue>
+                <valueName>Radionuclide Bone Scan</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Vaccine</controllingFieldValue>
+                <valueName>COVID-19 Vaccine</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Vaccine</controllingFieldValue>
+                <valueName>Hepatitis A Vaccine</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Vaccine</controllingFieldValue>
+                <valueName>Hepatitis B Vaccine</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Vaccine</controllingFieldValue>
+                <valueName>HPV Vaccine (Human Papillomavirus)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Vaccine</controllingFieldValue>
+                <valueName>Influenza (Flu)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Vaccine</controllingFieldValue>
+                <valueName>Measles, Mumps and Rubella (MMR)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Vaccine</controllingFieldValue>
+                <valueName>Shingles (Shingrix)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Vaccine</controllingFieldValue>
+                <valueName>Tetanus Dipthera Pertussis (Tdap)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Vaccine</controllingFieldValue>
+                <valueName>Varicella (Chicken Pox)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Counseling</controllingFieldValue>
+                <valueName>Smoking Cessation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Resources</controllingFieldValue>
+                <valueName>Battered Women&apos;s Shelters</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Resources</controllingFieldValue>
+                <valueName>Child/Elder Care</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Resources</controllingFieldValue>
+                <valueName>Clothing</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Resources</controllingFieldValue>
+                <valueName>COVID-19/Disaster Relief</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Resources</controllingFieldValue>
+                <valueName>Diabetes Education</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Resources</controllingFieldValue>
+                <valueName>Emergency Assistance</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Resources</controllingFieldValue>
+                <valueName>Employment Assistance</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Resources</controllingFieldValue>
+                <valueName>Financial Planning</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Resources</controllingFieldValue>
+                <valueName>Food Pantries</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Resources</controllingFieldValue>
+                <valueName>Housing Assistance</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Resources</controllingFieldValue>
+                <valueName>Legal Aid</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Resources</controllingFieldValue>
+                <valueName>MEDICAID Assistance</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Resources</controllingFieldValue>
+                <valueName>Medical Assistance</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Resources</controllingFieldValue>
+                <valueName>Mental Health</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Resources</controllingFieldValue>
+                <valueName>Parenting, Pregnancy, &amp; Adoption</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Resources</controllingFieldValue>
+                <valueName>Personal Care items/services</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Resources</controllingFieldValue>
+                <valueName>Refugee Services</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Resources</controllingFieldValue>
+                <valueName>School Success Services</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Resources</controllingFieldValue>
+                <valueName>Senior Services</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Resources</controllingFieldValue>
+                <valueName>Transportation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Resources</controllingFieldValue>
+                <valueName>Utilities</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Resources</controllingFieldValue>
+                <valueName>Veteran Assistance</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OBGYN</controllingFieldValue>
+                <valueName>Gynecologic Oncology</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OBGYN</controllingFieldValue>
+                <valueName>Gynecology</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OBGYN</controllingFieldValue>
+                <valueName>Maternal Fetal Medicine</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OBGYN</controllingFieldValue>
+                <valueName>Obstetrics</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OBGYN</controllingFieldValue>
+                <valueName>Reproductive Endocrinology and Infertility</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OBGYN</controllingFieldValue>
+                <valueName>Urogynecology/Reconstructive Pelvic Surgery</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Ophthalmology</controllingFieldValue>
+                <valueName>Binocular Vision</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Ophthalmology</controllingFieldValue>
+                <valueName>Cataract Surgery</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Ophthalmology</controllingFieldValue>
+                <valueName>Cornea</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Ophthalmology</controllingFieldValue>
+                <valueName>Glaucoma</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Ophthalmology</controllingFieldValue>
+                <valueName>Neuro-Ophthalmology</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Ophthalmology</controllingFieldValue>
+                <valueName>Oculoplastics</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Ophthalmology</controllingFieldValue>
+                <valueName>Refractive Surgery</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Ophthalmology</controllingFieldValue>
+                <valueName>Retina</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Orthopedics</controllingFieldValue>
+                <valueName>Ankle and Foot</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Orthopedics</controllingFieldValue>
+                <valueName>Arthroscopy</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Orthopedics</controllingFieldValue>
+                <valueName>Elbow</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Orthopedics</controllingFieldValue>
+                <valueName>Hip</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Orthopedics</controllingFieldValue>
+                <valueName>Knee</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Orthopedics</controllingFieldValue>
+                <valueName>Shoulder</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Orthopedics</controllingFieldValue>
+                <valueName>Spine</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Orthopedics</controllingFieldValue>
+                <valueName>Wrist and Hand</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Physiatry</controllingFieldValue>
+                <valueName>Pain Management</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Physical Medicine &amp; Rehabilitation</controllingFieldValue>
+                <valueName>Chiropractic</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Physical Medicine &amp; Rehabilitation</controllingFieldValue>
+                <valueName>Pelvic Health &amp; Rehabilitation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Physical Medicine &amp; Rehabilitation</controllingFieldValue>
+                <valueName>Physical Therapy</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Physical Medicine &amp; Rehabilitation</controllingFieldValue>
+                <valueName>TMJ Specialist</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Urgency__c</fullName>
+        <description>Urgency for the Patient Referral. Requested by Sarah L for Patient Referral Management project.</description>
+        <externalId>false</externalId>
+        <label>Urgency</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Urgent (1-3)</fullName>
+                    <default>false</default>
+                    <label>Urgent (1-3)</label>
+                </value>
+                <value>
+                    <fullName>Non-Urgent (7)</fullName>
+                    <default>false</default>
+                    <label>Non-Urgent (7)</label>
+                </value>
+                <value>
+                    <fullName>Non-Urgent (30)</fullName>
+                    <default>false</default>
+                    <label>Non-Urgent (30)</label>
+                </value>
+                <value>
+                    <fullName>Non-Urgent (90)</fullName>
+                    <default>false</default>
+                    <label>Non-Urgent (90)</label>
+                </value>
+                <value>
+                    <fullName>Non-Urgent (Other)</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Non-Urgent (Other)</label>
+                </value>
+                <value>
+                    <fullName>Same Day Urgent</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Same Day Urgent</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>XO_Clinic__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>XO Clinic for the Patient Referral. Requested by Sarah L for Patient Referral Management project.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the XO Clinic for this Patient Referral.</inlineHelpText>
+        <label>XO Clinic</label>
+        <referenceTo>Clinic__c</referenceTo>
+        <relationshipLabel>Patient Referrals</relationshipLabel>
+        <relationshipName>Patient_Referrals</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>XO_First__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>XO First</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>XO_Internal_Rating__c</fullName>
+        <externalId>false</externalId>
+        <label>XO Internal Rating</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                    <label>1</label>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                    <label>2</label>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                    <label>3</label>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                    <label>4</label>
+                </value>
+                <value>
+                    <fullName>5</fullName>
+                    <default>false</default>
+                    <label>5</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>XO_Provider_Rating_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>VALUE(TEXT(XO_Provider_Rating__c))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Used in reporting</inlineHelpText>
+        <label>XO Provider Rating Number</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>XO_Provider_Rating__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>XO Provider Rating on a scale of 1 - 5 stars.</inlineHelpText>
+        <label>XO Provider Rating</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                    <label>1</label>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                    <label>2</label>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                    <label>3</label>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                    <label>4</label>
+                </value>
+                <value>
+                    <fullName>5</fullName>
+                    <default>false</default>
+                    <label>5</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>XO_Provider__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>XO Provider for the Patient Referral. Requested by Sarah L for Patient Referral Management project.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the XO Provider for this Patient Referral.</inlineHelpText>
+        <label>XO Provider</label>
+        <referenceTo>Provider__c</referenceTo>
+        <relationshipLabel>Patient Referrals</relationshipLabel>
+        <relationshipName>Patient_Referrals</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>of_Days_to_Schedule_Appointment__c</fullName>
+        <externalId>false</externalId>
+        <formula>((Appointment_Date_Entered__c ) - (DATEVALUE( CreatedDate ))) - 
+
+(CASE(
+      MOD(Appointment_Date_Entered__c - DATE(1985,6,24),7), 
+0 , CASE( MOD( DATEVALUE(CreatedDate) - Appointment_Date_Entered__c, 7),1,0,2,0,3,0,4,0,5,1,6,2,0), 
+1 , CASE( MOD( DATEVALUE(CreatedDate) - Appointment_Date_Entered__c, 7),0,0,1,0,2,0,3,0,4,0,5,2,2), 
+2 , CASE( MOD( DATEVALUE(CreatedDate) - Appointment_Date_Entered__c, 7),0,0,1,0,2,0,3,1,2), 
+3 , CASE( MOD( DATEVALUE(CreatedDate) - Appointment_Date_Entered__c, 7),0,0,1,0,2,1,2), 
+4 , CASE( MOD( DATEVALUE(CreatedDate) - Appointment_Date_Entered__c, 7),0,0,1,1,2), 
+5 , CASE( MOD( DATEVALUE(CreatedDate) - Appointment_Date_Entered__c, 7),0,1,2), 
+6 , CASE( MOD( DATEVALUE(CreatedDate) - Appointment_Date_Entered__c, 7),6,2,1), 
+999) 
++ 
+(FLOOR((Appointment_Date_Entered__c) - (DATEVALUE(CreatedDate)))/7)*2)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label># of Days to Schedule Appointment</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Patient Referral</label>
+    <listViews>
+        <fullName>AMAT_Clinic_Patient_Referrals</fullName>
+        <columns>NAME</columns>
+        <columns>EMR__c</columns>
+        <columns>Patient__c</columns>
+        <columns>XO_Clinic__c</columns>
+        <columns>XO_Provider__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Detail__c</columns>
+        <columns>Request_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>XO_Clinic__c</field>
+            <operation>contains</operation>
+            <value>AMAT</value>
+        </filters>
+        <label>AMAT Clinic Patient Referrals</label>
+        <sharedTo>
+            <role>Care_Navigator</role>
+            <role>Care_Navigator_Admin</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>EMR__c</columns>
+        <columns>Patient__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Detail__c</columns>
+        <columns>Request_Date__c</columns>
+        <columns>Appointment_Date__c</columns>
+        <columns>Specialist_Survey_Sent__c</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Closed</value>
+        </filters>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Open_Patient_Referrals</fullName>
+        <columns>NAME</columns>
+        <columns>EMR__c</columns>
+        <columns>Patient__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Detail__c</columns>
+        <columns>Request_Date__c</columns>
+        <columns>Appointment_Date__c</columns>
+        <columns>Specialist_Survey_Sent__c</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>XO_Clinic__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </filters>
+        <label>All Open Patient Referrals</label>
+        <sharedTo>
+            <role>Care_Navigator</role>
+            <role>Care_Navigator_Admin</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>All_Open_Referrals</fullName>
+        <columns>NAME</columns>
+        <columns>EMR__c</columns>
+        <columns>Patient__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Detail__c</columns>
+        <columns>Urgency__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Is_Closed__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>OWNER.FIRST_NAME</field>
+            <operation>equals</operation>
+            <value>Danielle</value>
+        </filters>
+        <label>All Open Referrals</label>
+    </listViews>
+    <listViews>
+        <fullName>Comcast_Phili_Clinic_Patient_Referrals</fullName>
+        <columns>NAME</columns>
+        <columns>EMR__c</columns>
+        <columns>Patient__c</columns>
+        <columns>XO_Clinic__c</columns>
+        <columns>XO_Provider__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Detail__c</columns>
+        <columns>Request_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>XO_Clinic__c</field>
+            <operation>contains</operation>
+            <value>Comcast Philadelphia</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </filters>
+        <filters>
+            <field>Status_Detail__c</field>
+            <operation>equals</operation>
+            <value>Pending,Report Requested,Scheduled,Unscheduled</value>
+        </filters>
+        <label>Comcast Phili Clinic Patient Referrals</label>
+        <sharedTo>
+            <role>Care_Navigator</role>
+            <role>Care_Navigator_Admin</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Facebook_Clinic_Patient_Referrals</fullName>
+        <columns>NAME</columns>
+        <columns>EMR__c</columns>
+        <columns>Patient__c</columns>
+        <columns>XO_Clinic__c</columns>
+        <columns>XO_Provider__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Detail__c</columns>
+        <columns>Request_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>XO_Clinic__c</field>
+            <operation>contains</operation>
+            <value>Facebook</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </filters>
+        <label>Facebook Clinic Patient Referrals</label>
+        <sharedTo>
+            <role>Care_Navigator</role>
+            <role>Care_Navigator_Admin</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Midtown_Clinic_Patient_Referrals</fullName>
+        <columns>NAME</columns>
+        <columns>EMR__c</columns>
+        <columns>Patient__c</columns>
+        <columns>XO_Clinic__c</columns>
+        <columns>XO_Provider__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Detail__c</columns>
+        <columns>Request_Date__c</columns>
+        <columns>Specialty__c</columns>
+        <columns>Specialist__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>XO_Clinic__c</field>
+            <operation>contains</operation>
+            <value>Midtown</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </filters>
+        <label>Midtown Clinic Patient Referrals</label>
+        <sharedTo>
+            <role>Care_Navigator</role>
+            <role>Care_Navigator_Admin</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>My_Open_Referrals</fullName>
+        <columns>NAME</columns>
+        <columns>EMR__c</columns>
+        <columns>Patient__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Detail__c</columns>
+        <columns>Urgency__c</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>Is_Closed__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>My Open Referrals</label>
+    </listViews>
+    <listViews>
+        <fullName>Sherpaa_Clinic_Patient_Referrals</fullName>
+        <columns>NAME</columns>
+        <columns>EMR__c</columns>
+        <columns>Patient__c</columns>
+        <columns>XO_Clinic__c</columns>
+        <columns>XO_Provider__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Detail__c</columns>
+        <columns>Request_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>XO_Clinic__c</field>
+            <operation>contains</operation>
+            <value>Sherpaa</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </filters>
+        <label>Sherpaa Clinic Patient Referrals</label>
+        <sharedTo>
+            <role>Care_Navigator</role>
+            <role>Care_Navigator_Admin</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Specialty</fullName>
+        <columns>NAME</columns>
+        <columns>Specialist__c</columns>
+        <columns>Group_or_Institution__c</columns>
+        <columns>XO_Clinic__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>XO_Clinic__c</field>
+            <operation>equals</operation>
+            <value>Comcast Philadelphia</value>
+        </filters>
+        <label>Specialty View for Comcast Philly</label>
+    </listViews>
+    <listViews>
+        <fullName>Visa_Clinic_Patient_Referrals</fullName>
+        <columns>NAME</columns>
+        <columns>EMR__c</columns>
+        <columns>Patient__c</columns>
+        <columns>XO_Clinic__c</columns>
+        <columns>XO_Provider__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Detail__c</columns>
+        <columns>Request_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>XO_Clinic__c</field>
+            <operation>contains</operation>
+            <value>Visa</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </filters>
+        <label>Visa Clinic Patient Referrals</label>
+        <sharedTo>
+            <role>Care_Navigator</role>
+            <role>Care_Navigator_Admin</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Visa_Patient_Referrals</fullName>
+        <columns>NAME</columns>
+        <columns>EMR__c</columns>
+        <columns>Patient__c</columns>
+        <columns>XO_Clinic__c</columns>
+        <columns>XO_Provider__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Detail__c</columns>
+        <columns>Request_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>XO_Clinic__c</field>
+            <operation>contains</operation>
+            <value>NS</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </filters>
+        <label>NS Clinic Patient Referrals</label>
+        <sharedTo>
+            <role>Care_Navigator</role>
+            <role>Care_Navigator_Admin</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Western_Digital_Clinic_Patient_Referrals</fullName>
+        <columns>NAME</columns>
+        <columns>EMR__c</columns>
+        <columns>Patient__c</columns>
+        <columns>XO_Clinic__c</columns>
+        <columns>XO_Provider__c</columns>
+        <columns>Status__c</columns>
+        <columns>Status_Detail__c</columns>
+        <columns>Request_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>XO_Clinic__c</field>
+            <operation>contains</operation>
+            <value>WD</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </filters>
+        <label>Western Digital Clinic Patient Referrals</label>
+        <sharedTo>
+            <role>Care_Navigator</role>
+            <role>Care_Navigator_Admin</role>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <displayFormat>XOPR-{0000}</displayFormat>
+        <label>Patient Referral ID</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Patient Referrals</pluralLabel>
+    <searchLayouts>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <excludedStandardButtons>OpenListInQuip</excludedStandardButtons>
+        <searchResultsAdditionalFields>EMR__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Patient__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Request_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status_Detail__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CREATEDBY_USER</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>Complicated_Referral_Reason</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+    Complicated_Referral__c = TRUE,
+    ISPICKVAL(Complication_Reason__c, &apos;&apos;)
+)</errorConditionFormula>
+        <errorDisplayField>Complication_Reason__c</errorDisplayField>
+        <errorMessage>Select a complication reason when complicated referral is true.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Selected_Patient_requires_EMR</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+    ISNEW(),
+    ISBLANK(Patient__r.EMR__c)
+)</errorConditionFormula>
+        <errorMessage>Please must enter the Patient Contact&apos;s EMR before a Patient Referral can be created.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Navigate_to_EMR</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Navigate to EMR</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://www.app.elationemr.com/patient/{!Patient_Referral__c.EMR__c}</url>
+    </webLinks>
+</CustomObject>

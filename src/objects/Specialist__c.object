@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Specialist_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Specialist_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <label>Specialist Compact Layout</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This object will store available Specialists available for selection on Patient Referrals.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Accepted_Insurance__c</fullName>
+        <externalId>false</externalId>
+        <label>Accepted Insurance</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Aetna</fullName>
+                    <default>false</default>
+                    <label>Aetna</label>
+                </value>
+                <value>
+                    <fullName>Aetna Choice POS II</fullName>
+                    <default>false</default>
+                    <label>Aetna Choice POS II</label>
+                </value>
+                <value>
+                    <fullName>Aetna HMO</fullName>
+                    <default>false</default>
+                    <label>Aetna HMO</label>
+                </value>
+                <value>
+                    <fullName>Aetna POS</fullName>
+                    <default>false</default>
+                    <label>Aetna POS</label>
+                </value>
+                <value>
+                    <fullName>Aetna POS II</fullName>
+                    <default>false</default>
+                    <label>Aetna POS II</label>
+                </value>
+                <value>
+                    <fullName>Aetna PPO</fullName>
+                    <default>false</default>
+                    <label>Aetna PPO</label>
+                </value>
+                <value>
+                    <fullName>Alignment</fullName>
+                    <default>false</default>
+                    <label>Alignment</label>
+                </value>
+                <value>
+                    <fullName>Anthem</fullName>
+                    <default>false</default>
+                    <label>Anthem</label>
+                </value>
+                <value>
+                    <fullName>Anthem (NTN)</fullName>
+                    <default>false</default>
+                    <label>Anthem (NTN)</label>
+                </value>
+                <value>
+                    <fullName>Anthem Blue Cross</fullName>
+                    <default>false</default>
+                    <label>Anthem Blue Cross</label>
+                </value>
+                <value>
+                    <fullName>Anthem Blue Cross Blue Shield</fullName>
+                    <default>false</default>
+                    <label>Anthem Blue Cross Blue Shield</label>
+                </value>
+                <value>
+                    <fullName>Anthem Blue Cross of California</fullName>
+                    <default>false</default>
+                    <label>Anthem Blue Cross of California</label>
+                </value>
+                <value>
+                    <fullName>Anthem Cal Medi-Connect</fullName>
+                    <default>false</default>
+                    <label>Anthem Cal Medi-Connect</label>
+                </value>
+                <value>
+                    <fullName>Blue Cross</fullName>
+                    <default>false</default>
+                    <label>Blue Cross</label>
+                </value>
+                <value>
+                    <fullName>Blue Cross Blue Shield</fullName>
+                    <default>false</default>
+                    <label>Blue Cross Blue Shield</label>
+                </value>
+                <value>
+                    <fullName>Blue Cross Blue Shield EPO</fullName>
+                    <default>false</default>
+                    <label>Blue Cross Blue Shield EPO</label>
+                </value>
+                <value>
+                    <fullName>Blue Cross Blue Shield PPO</fullName>
+                    <default>false</default>
+                    <label>Blue Cross Blue Shield PPO</label>
+                </value>
+                <value>
+                    <fullName>Blue Cross HMO</fullName>
+                    <default>false</default>
+                    <label>Blue Cross HMO</label>
+                </value>
+                <value>
+                    <fullName>Blue Cross POS</fullName>
+                    <default>false</default>
+                    <label>Blue Cross POS</label>
+                </value>
+                <value>
+                    <fullName>Blue Cross PPO</fullName>
+                    <default>false</default>
+                    <label>Blue Cross PPO</label>
+                </value>
+                <value>
+                    <fullName>Blue Shield</fullName>
+                    <default>false</default>
+                    <label>Blue Shield</label>
+                </value>
+                <value>
+                    <fullName>Blue Shield covered California Humana</fullName>
+                    <default>false</default>
+                    <label>Blue Shield covered California Humana</label>
+                </value>
+                <value>
+                    <fullName>Blue Shield HMO</fullName>
+                    <default>false</default>
+                    <label>Blue Shield HMO</label>
+                </value>
+                <value>
+                    <fullName>Blue Shield PPO</fullName>
+                    <default>false</default>
+                    <label>Blue Shield PPO</label>
+                </value>
+                <value>
+                    <fullName>Cardinal Care (Stanford students)</fullName>
+                    <default>false</default>
+                    <label>Cardinal Care (Stanford students)</label>
+                </value>
+                <value>
+                    <fullName>Carpenter</fullName>
+                    <default>false</default>
+                    <label>Carpenter</label>
+                </value>
+                <value>
+                    <fullName>Cigna</fullName>
+                    <default>false</default>
+                    <label>Cigna</label>
+                </value>
+                <value>
+                    <fullName>Cigna/Great West HMO</fullName>
+                    <default>false</default>
+                    <label>Cigna/Great West HMO</label>
+                </value>
+                <value>
+                    <fullName>Cigna/Great West PPO</fullName>
+                    <default>false</default>
+                    <label>Cigna/Great West PPO</label>
+                </value>
+                <value>
+                    <fullName>Cigna PPO</fullName>
+                    <default>false</default>
+                    <label>Cigna PPO</label>
+                </value>
+                <value>
+                    <fullName>First Health</fullName>
+                    <default>false</default>
+                    <label>First Health</label>
+                </value>
+                <value>
+                    <fullName>First Health (CCN)</fullName>
+                    <default>false</default>
+                    <label>First Health (CCN)</label>
+                </value>
+                <value>
+                    <fullName>Great West</fullName>
+                    <default>false</default>
+                    <label>Great West</label>
+                </value>
+                <value>
+                    <fullName>Healthnet</fullName>
+                    <default>false</default>
+                    <label>Healthnet</label>
+                </value>
+                <value>
+                    <fullName>Health Net HMO</fullName>
+                    <default>false</default>
+                    <label>Health Net HMO</label>
+                </value>
+                <value>
+                    <fullName>Health Net PPO</fullName>
+                    <default>false</default>
+                    <label>Health Net PPO</label>
+                </value>
+                <value>
+                    <fullName>Health Risk Management</fullName>
+                    <default>false</default>
+                    <label>Health Risk Management</label>
+                </value>
+                <value>
+                    <fullName>Humana</fullName>
+                    <default>false</default>
+                    <label>Humana</label>
+                </value>
+                <value>
+                    <fullName>Interplan</fullName>
+                    <default>false</default>
+                    <label>Interplan</label>
+                </value>
+                <value>
+                    <fullName>LSE Plan</fullName>
+                    <default>false</default>
+                    <label>LSE Plan</label>
+                </value>
+                <value>
+                    <fullName>Medi-Cal</fullName>
+                    <default>false</default>
+                    <label>Medi-Cal</label>
+                </value>
+                <value>
+                    <fullName>Medi-Cal/CCS</fullName>
+                    <default>false</default>
+                    <label>Medi-Cal/CCS</label>
+                </value>
+                <value>
+                    <fullName>Medicare</fullName>
+                    <default>false</default>
+                    <label>Medicare</label>
+                </value>
+                <value>
+                    <fullName>Meritain EPO</fullName>
+                    <default>false</default>
+                    <label>Meritain EPO</label>
+                </value>
+                <value>
+                    <fullName>Meritain PPO</fullName>
+                    <default>false</default>
+                    <label>Meritain PPO</label>
+                </value>
+                <value>
+                    <fullName>MHN</fullName>
+                    <default>false</default>
+                    <label>MHN</label>
+                </value>
+                <value>
+                    <fullName>Multiplan</fullName>
+                    <default>false</default>
+                    <label>Multiplan</label>
+                </value>
+                <value>
+                    <fullName>Networks by Design</fullName>
+                    <default>false</default>
+                    <label>Networks by Design</label>
+                </value>
+                <value>
+                    <fullName>Optum</fullName>
+                    <default>false</default>
+                    <label>Optum</label>
+                </value>
+                <value>
+                    <fullName>San Jose Medical Group</fullName>
+                    <default>false</default>
+                    <label>San Jose Medical Group</label>
+                </value>
+                <value>
+                    <fullName>SCCIPA</fullName>
+                    <default>false</default>
+                    <label>SCCIPA</label>
+                </value>
+                <value>
+                    <fullName>Tricare</fullName>
+                    <default>false</default>
+                    <label>Tricare</label>
+                </value>
+                <value>
+                    <fullName>Tricare/Triwest</fullName>
+                    <default>false</default>
+                    <label>Tricare/Triwest</label>
+                </value>
+                <value>
+                    <fullName>UFCW</fullName>
+                    <default>false</default>
+                    <label>UFCW</label>
+                </value>
+                <value>
+                    <fullName>UHC</fullName>
+                    <default>false</default>
+                    <label>UHC</label>
+                </value>
+                <value>
+                    <fullName>UHC PPO</fullName>
+                    <default>false</default>
+                    <label>UHC PPO</label>
+                </value>
+                <value>
+                    <fullName>United Behavioral Health</fullName>
+                    <default>false</default>
+                    <label>United Behavioral Health</label>
+                </value>
+                <value>
+                    <fullName>United Healthcare</fullName>
+                    <default>false</default>
+                    <label>United Healthcare</label>
+                </value>
+                <value>
+                    <fullName>Affinity HMO</fullName>
+                    <default>false</default>
+                    <label>Affinity HMO</label>
+                </value>
+                <value>
+                    <fullName>Hills Physicians Medical Group HMO</fullName>
+                    <default>false</default>
+                    <label>Hills Physicians Medical Group HMO</label>
+                </value>
+                <value>
+                    <fullName>SCCIPA HMO</fullName>
+                    <default>false</default>
+                    <label>SCCIPA HMO</label>
+                </value>
+                <value>
+                    <fullName>Anthem PPO</fullName>
+                    <default>false</default>
+                    <label>Anthem PPO</label>
+                </value>
+                <value>
+                    <fullName>Physician&apos;s Medical Group</fullName>
+                    <default>false</default>
+                    <label>Physician&apos;s Medical Group</label>
+                </value>
+                <value>
+                    <fullName>AARP</fullName>
+                    <default>false</default>
+                    <label>AARP</label>
+                </value>
+                <value>
+                    <fullName>Aetna EPO</fullName>
+                    <default>false</default>
+                    <label>Aetna EPO</label>
+                </value>
+                <value>
+                    <fullName>Amerihealth</fullName>
+                    <default>false</default>
+                    <label>Amerihealth</label>
+                </value>
+                <value>
+                    <fullName>Blue Cross of California</fullName>
+                    <default>false</default>
+                    <label>Blue Cross of California</label>
+                </value>
+                <value>
+                    <fullName>Beacon</fullName>
+                    <default>false</default>
+                    <label>Beacon</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>COVID_19_Update__c</fullName>
+        <externalId>false</externalId>
+        <label>COVID-19 Update</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Call_Preference__c</fullName>
+        <externalId>false</externalId>
+        <label>Call Preference</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>City__c</fullName>
+        <externalId>false</externalId>
+        <label>City</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Country__c</fullName>
+        <externalId>false</externalId>
+        <label>Country</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Direct_Contact__c</fullName>
+        <externalId>false</externalId>
+        <label>Direct Contact</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email_Snippet__c</fullName>
+        <externalId>false</externalId>
+        <formula>Group_Location__r.Name&amp;BR()&amp;
+Name &amp;BR()&amp;
+&quot;Address: &quot;&amp;Street__c &amp;&quot;, &quot;&amp;City__c &amp;&quot;, &quot;&amp; State__c &amp;&quot; &quot;&amp; Zip__c &amp;BR()&amp; 
+&quot;Phone: &quot;&amp; Phone__c &amp;BR()&amp;
+&quot;Hours: &quot;&amp;BR()&amp; Hours__c &amp;BR()&amp;
+&quot;Website: &quot;&amp; Website__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Email Snippet</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Fax__c</fullName>
+        <externalId>false</externalId>
+        <label>Fax</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Group_Location__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Group Location</label>
+        <referenceTo>Location__c</referenceTo>
+        <relationshipLabel>Specialists</relationshipLabel>
+        <relationshipName>Specialists</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Hours__c</fullName>
+        <externalId>false</externalId>
+        <label>Hours</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Latitude__c</fullName>
+        <externalId>false</externalId>
+        <label>Latitude</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lead__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Lead</label>
+        <referenceTo>Lead</referenceTo>
+        <relationshipLabel>Specialists</relationshipLabel>
+        <relationshipName>Specialists</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Location__c</fullName>
+        <displayLocationInDecimal>true</displayLocationInDecimal>
+        <externalId>false</externalId>
+        <label>Location</label>
+        <required>false</required>
+        <scale>4</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Location</type>
+    </fields>
+    <fields>
+        <fullName>Longitude__c</fullName>
+        <externalId>false</externalId>
+        <label>Longitude</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NPI__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What is the specialist&apos;s NPI number?</inlineHelpText>
+        <label>NPI</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Notes</label>
+        <length>35000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Phone</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Profile_URL__c</fullName>
+        <externalId>false</externalId>
+        <label>Profile URL</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Referral_Count__c</fullName>
+        <externalId>false</externalId>
+        <label>Referral Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Specialty__c</fullName>
+        <externalId>false</externalId>
+        <label>Specialty</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Specialty_List</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>State__c</fullName>
+        <externalId>false</externalId>
+        <label>State</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Street__c</fullName>
+        <externalId>false</externalId>
+        <label>Street</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Website__c</fullName>
+        <externalId>false</externalId>
+        <label>Website</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Zip__c</fullName>
+        <externalId>false</externalId>
+        <label>Zip</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Specialist</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Specialist Name</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Specialists</pluralLabel>
+    <searchLayouts>
+        <excludedStandardButtons>OpenListInQuip</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>MassChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <searchResultsAdditionalFields>Specialty__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>NPI__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Group_Location__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Street__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>State__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

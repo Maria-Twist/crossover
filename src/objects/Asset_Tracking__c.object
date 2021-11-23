@@ -1,0 +1,1454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Additional_Information__c</fullName>
+        <description>May include asset shut off &quot;key&quot; or other information</description>
+        <externalId>false</externalId>
+        <label>Additional Information</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Asset_Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Asset Category</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>IT Equipment</fullName>
+                    <default>false</default>
+                    <label>IT Equipment</label>
+                </value>
+                <value>
+                    <fullName>Office Equipment</fullName>
+                    <default>false</default>
+                    <label>Office Equipment</label>
+                </value>
+                <value>
+                    <fullName>Furniture, Fixtures and Equipment</fullName>
+                    <default>false</default>
+                    <label>Furniture, Fixtures and Equipment</label>
+                </value>
+                <value>
+                    <fullName>Medical Equipment</fullName>
+                    <default>false</default>
+                    <label>Medical Equipment</label>
+                </value>
+                <value>
+                    <fullName>Other Unspecified Assets</fullName>
+                    <default>false</default>
+                    <label>Other Unspecified Assets</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Asset_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Asset Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Asset_Category__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Mobile Phone</fullName>
+                    <default>false</default>
+                    <label>Mobile Phone</label>
+                </value>
+                <value>
+                    <fullName>Desktop Computer</fullName>
+                    <default>false</default>
+                    <label>Desktop Computer</label>
+                </value>
+                <value>
+                    <fullName>Laptop Computer</fullName>
+                    <default>false</default>
+                    <label>Laptop Computer</label>
+                </value>
+                <value>
+                    <fullName>Tablet Computer</fullName>
+                    <default>false</default>
+                    <label>Tablet Computer</label>
+                </value>
+                <value>
+                    <fullName>Router</fullName>
+                    <default>false</default>
+                    <label>Router</label>
+                </value>
+                <value>
+                    <fullName>Voice / Data</fullName>
+                    <default>false</default>
+                    <label>Voice / Data</label>
+                </value>
+                <value>
+                    <fullName>Printer</fullName>
+                    <default>false</default>
+                    <label>Printer</label>
+                </value>
+                <value>
+                    <fullName>Server</fullName>
+                    <default>false</default>
+                    <label>Server</label>
+                </value>
+                <value>
+                    <fullName>Clinic Equipment</fullName>
+                    <default>false</default>
+                    <label>Clinic Equipment</label>
+                </value>
+                <value>
+                    <fullName>Lab Equipment</fullName>
+                    <default>false</default>
+                    <label>Lab Equipment</label>
+                </value>
+                <value>
+                    <fullName>Office Equipment</fullName>
+                    <default>false</default>
+                    <label>Office Equipment</label>
+                </value>
+                <value>
+                    <fullName>Other Unspecified Equipment</fullName>
+                    <default>false</default>
+                    <label>Other Unspecified Equipment</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>IT Equipment</controllingFieldValue>
+                <valueName>Mobile Phone</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>IT Equipment</controllingFieldValue>
+                <valueName>Desktop Computer</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>IT Equipment</controllingFieldValue>
+                <valueName>Laptop Computer</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>IT Equipment</controllingFieldValue>
+                <valueName>Tablet Computer</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>IT Equipment</controllingFieldValue>
+                <valueName>Router</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>IT Equipment</controllingFieldValue>
+                <valueName>Voice / Data</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>IT Equipment</controllingFieldValue>
+                <valueName>Printer</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>IT Equipment</controllingFieldValue>
+                <valueName>Server</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Furniture, Fixtures and Equipment</controllingFieldValue>
+                <valueName>Clinic Equipment</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Furniture, Fixtures and Equipment</controllingFieldValue>
+                <valueName>Lab Equipment</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Furniture, Fixtures and Equipment</controllingFieldValue>
+                <valueName>Office Equipment</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Other Unspecified Assets</controllingFieldValue>
+                <valueName>Other Unspecified Equipment</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Asset_Owner__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>Owner of XO asset or equipment</description>
+        <externalId>false</externalId>
+        <label>Asset Owner</label>
+        <referenceTo>XO_Employee__c</referenceTo>
+        <relationshipLabel>XO Asset Tracking</relationshipLabel>
+        <relationshipName>XO_Asset_Tracking</relationshipName>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Asset_Picture__c</fullName>
+        <externalId>false</externalId>
+        <label>Asset Picture</label>
+        <length>256</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Client_Location__c</fullName>
+        <externalId>false</externalId>
+        <label>Client Location</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>XOWWHQ Aliso</fullName>
+                    <default>false</default>
+                    <label>XOWWHQ Aliso</label>
+                </value>
+                <value>
+                    <fullName>XO San Francisco</fullName>
+                    <default>false</default>
+                    <label>XO San Francisco</label>
+                </value>
+                <value>
+                    <fullName>Apple Cupertino</fullName>
+                    <default>false</default>
+                    <label>Apple Cupertino</label>
+                </value>
+                <value>
+                    <fullName>Apple Austin</fullName>
+                    <default>false</default>
+                    <label>Apple Austin</label>
+                </value>
+                <value>
+                    <fullName>Apple Sacramento</fullName>
+                    <default>false</default>
+                    <label>Apple Sacramento</label>
+                </value>
+                <value>
+                    <fullName>Facebook Menlo Park</fullName>
+                    <default>false</default>
+                    <label>Facebook Menlo Park</label>
+                </value>
+                <value>
+                    <fullName>Facebook Austin</fullName>
+                    <default>false</default>
+                    <label>Facebook Austin</label>
+                </value>
+                <value>
+                    <fullName>Applied Santa Clara Valley</fullName>
+                    <default>false</default>
+                    <label>Applied Santa Clara Valley</label>
+                </value>
+                <value>
+                    <fullName>Applied Gloucester</fullName>
+                    <default>false</default>
+                    <label>Applied Gloucester</label>
+                </value>
+                <value>
+                    <fullName>Qualcomm San Diego</fullName>
+                    <default>false</default>
+                    <label>Qualcomm San Diego</label>
+                </value>
+                <value>
+                    <fullName>First American Santa Ana</fullName>
+                    <default>false</default>
+                    <label>First American Santa Ana</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Full_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Asset_Owner__r.Employee_First_Name__c +&quot; &quot;+ Asset_Owner__r.Employee_Last_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Full Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Asset_Owner__r.Employee_Last_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Last Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Model_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Model Number</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Price__c</fullName>
+        <externalId>false</externalId>
+        <label>Price</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Purchase_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Purchase Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Purchase_Order__c</fullName>
+        <externalId>false</externalId>
+        <label>Purchase Order #</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Quantity__c</fullName>
+        <externalId>false</externalId>
+        <label>Quantity</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Serial_Number__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>false</externalId>
+        <label>Serial Number</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Vendor__c</fullName>
+        <description>Name of the Product Vendor.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>For example, Cisco or Welch Allyn</inlineHelpText>
+        <label>Vendor</label>
+        <length>25</length>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>XO_Asset_Tag__c</fullName>
+        <description>Insert the asset tag number</description>
+        <externalId>false</externalId>
+        <label>XO Asset Tag</label>
+        <length>5</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>XO Asset Tracking</label>
+    <listViews>
+        <fullName>Cupertino_Assets_1</fullName>
+        <columns>NAME</columns>
+        <columns>OBJECT_ID</columns>
+        <columns>XO_Asset_Tag__c</columns>
+        <columns>Serial_Number__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Asset_Category__c</columns>
+        <columns>Asset_Owner__c</columns>
+        <columns>Model_Number__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Client_Location__c</field>
+            <operation>equals</operation>
+            <value>Apple Cupertino</value>
+        </filters>
+        <label>Cupertino Assets 1</label>
+        <sharedTo>
+            <role>XO_Practice_Manager_Apple_Cupertino</role>
+            <roleAndSubordinates>XO_Practice_Manager_Apple_Cupertino</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <label>Asset Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>XO Asset Tracking</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Assets_AMAT_Gloucester</fullName>
+        <active>true</active>
+        <label>Assets - AMAT Gloucester</label>
+        <picklistValues>
+            <picklist>Asset_Category__c</picklist>
+            <values>
+                <fullName>Furniture%2C Fixtures and Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Unspecified Assets</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Asset_Description__c</picklist>
+            <values>
+                <fullName>Clinic Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Desktop Computer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lab Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Laptop Computer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Unspecified Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Printer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Router</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Server</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tablet Computer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Voice %2F Data</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Client_Location__c</picklist>
+            <values>
+                <fullName>Apple Austin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Apple Cupertino</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Apple Sacramento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Applied Gloucester</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Applied Santa Clara Valley</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facebook Austin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facebook Menlo Park</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>First American Santa Ana</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qualcomm San Diego</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>XO San Francisco</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>XOWWHQ Aliso</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Assets_AMAT_Santa_Clara</fullName>
+        <active>true</active>
+        <label>Assets - AMAT Santa Clara</label>
+        <picklistValues>
+            <picklist>Asset_Category__c</picklist>
+            <values>
+                <fullName>Furniture%2C Fixtures and Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Unspecified Assets</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Asset_Description__c</picklist>
+            <values>
+                <fullName>Clinic Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Desktop Computer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lab Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Laptop Computer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Unspecified Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Printer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Router</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Server</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tablet Computer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Voice %2F Data</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Client_Location__c</picklist>
+            <values>
+                <fullName>Apple Austin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Apple Cupertino</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Apple Sacramento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Applied Gloucester</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Applied Santa Clara Valley</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facebook Austin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facebook Menlo Park</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>First American Santa Ana</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qualcomm San Diego</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>XO San Francisco</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>XOWWHQ Aliso</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Assets_Apple_Austin</fullName>
+        <active>true</active>
+        <label>Assets - Apple Austin</label>
+        <picklistValues>
+            <picklist>Asset_Category__c</picklist>
+            <values>
+                <fullName>Furniture%2C Fixtures and Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Unspecified Assets</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Asset_Description__c</picklist>
+            <values>
+                <fullName>Clinic Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Desktop Computer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lab Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Laptop Computer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Unspecified Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Printer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Router</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Server</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tablet Computer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Voice %2F Data</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Client_Location__c</picklist>
+            <values>
+                <fullName>Apple Austin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Apple Cupertino</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Apple Sacramento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Applied Gloucester</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Applied Santa Clara Valley</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facebook Austin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facebook Menlo Park</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>First American Santa Ana</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qualcomm San Diego</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>XO San Francisco</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>XOWWHQ Aliso</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Assets_Apple_Cupertino</fullName>
+        <active>true</active>
+        <label>Assets - Apple Cupertino</label>
+        <picklistValues>
+            <picklist>Asset_Category__c</picklist>
+            <values>
+                <fullName>Furniture%2C Fixtures and Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Unspecified Assets</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Asset_Description__c</picklist>
+            <values>
+                <fullName>Clinic Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Desktop Computer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lab Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Laptop Computer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Unspecified Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Printer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Router</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Server</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tablet Computer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Voice %2F Data</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Client_Location__c</picklist>
+            <values>
+                <fullName>Apple Austin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Apple Cupertino</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Apple Sacramento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Applied Gloucester</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Applied Santa Clara Valley</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facebook Austin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facebook Menlo Park</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>First American Santa Ana</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qualcomm San Diego</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>XO San Francisco</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>XOWWHQ Aliso</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Assets_FB_Menlo_Park</fullName>
+        <active>true</active>
+        <label>Assets - FB Menlo Park</label>
+        <picklistValues>
+            <picklist>Asset_Category__c</picklist>
+            <values>
+                <fullName>Furniture%2C Fixtures and Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Unspecified Assets</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Asset_Description__c</picklist>
+            <values>
+                <fullName>Clinic Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Desktop Computer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lab Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Laptop Computer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Unspecified Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Printer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Router</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Server</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tablet Computer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Voice %2F Data</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Client_Location__c</picklist>
+            <values>
+                <fullName>Apple Austin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Apple Cupertino</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Apple Sacramento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Applied Gloucester</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Applied Santa Clara Valley</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facebook Austin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facebook Menlo Park</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>First American Santa Ana</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qualcomm San Diego</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>XO San Francisco</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>XOWWHQ Aliso</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Assets_MSO</fullName>
+        <active>true</active>
+        <label>Assets - MSO</label>
+        <picklistValues>
+            <picklist>Asset_Category__c</picklist>
+            <values>
+                <fullName>Furniture%2C Fixtures and Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Unspecified Assets</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Asset_Description__c</picklist>
+            <values>
+                <fullName>Clinic Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Desktop Computer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lab Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Laptop Computer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Unspecified Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Printer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Router</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Server</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tablet Computer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Voice %2F Data</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Client_Location__c</picklist>
+            <values>
+                <fullName>Apple Austin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Apple Cupertino</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Apple Sacramento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Applied Gloucester</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Applied Santa Clara Valley</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facebook Austin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facebook Menlo Park</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>First American Santa Ana</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qualcomm San Diego</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>XO San Francisco</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>XOWWHQ Aliso</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Assets_Square</fullName>
+        <active>true</active>
+        <label>Assets - Square</label>
+        <picklistValues>
+            <picklist>Asset_Category__c</picklist>
+            <values>
+                <fullName>Furniture%2C Fixtures and Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Unspecified Assets</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Asset_Description__c</picklist>
+            <values>
+                <fullName>Clinic Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Desktop Computer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lab Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Laptop Computer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other Unspecified Equipment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Printer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Router</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Server</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tablet Computer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Voice %2F Data</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Client_Location__c</picklist>
+            <values>
+                <fullName>Apple Austin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Apple Cupertino</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Apple Sacramento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Applied Gloucester</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Applied Santa Clara Valley</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facebook Austin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facebook Menlo Park</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>First American Santa Ana</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qualcomm San Diego</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>XO San Francisco</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>XOWWHQ Aliso</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>Asset_Category__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Asset_Description__c</lookupDialogsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <startsWith>Vowel</startsWith>
+    <visibility>Public</visibility>
+</CustomObject>

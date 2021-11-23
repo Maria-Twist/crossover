@@ -1,0 +1,476 @@
+<apex:page showHeader="false" sidebar="false" standardController="XO_Follow_Up_Tracking__c" extensions="SavePatientAndXOFollowController" standardStylesheets="false" tabStyle="XO_Follow_Up_Tracking__c" id="page">
+   <html lang="en">
+      <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content=""/>
+        <meta name="author" content=""/>
+    
+        <title>CrossOver Health</title>
+    
+        <!-- Core -->
+        <link href="{!URLFOR($Resource.CreatePatientANdXOFollow, 'assets/bs/css/bootstrap.min.css')}" rel="stylesheet"/>
+        <!-- Theme -->
+        <link href="{!URLFOR($Resource.CreatePatientANdXOFollow, 'assets/bs/css/bootstrap-theme.min.css')}" rel="stylesheet"/>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"/>
+        <!-- Custom -->
+        <link href="{!URLFOR($Resource.CreatePatientANdXOFollow, 'assets/css/custom.css')}" rel="stylesheet"/>
+    
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <style type="text/css">
+            span.errorInfo
+            {
+                color:red;
+                display:none;
+            }
+            .wcs .form-group.required select {
+                border-left: 3px solid #E53935;
+                border-top-left-radius: 4px;
+                border-bottom-left-radius: 4px;
+            }
+            
+            .depentPicklist select
+            {
+                border-left: 3px solid #E53935;
+                border-top-left-radius: 4px;
+                border-bottom-left-radius: 4px;
+            }
+            
+            select
+            {
+                display: block;
+                width: 100%;
+                height: 34px;
+                padding: 6px 12px;
+                font-size: 14px;
+                line-height: 1.42857;
+                color: #555;
+                background-color: #FFF;
+                background-image: none;
+                border: 1px solid #CCC;
+                border-radius: 4px;
+                box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+                transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+            }
+            select[disabled=""]
+            {
+                background-color: #AAA;
+                border-left: 1px solid #CCC;
+                border-top-left-radius: 4px;
+                border-bottom-left-radius: 4px;
+                box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+            }
+        </style>
+      </head>
+    
+      <body class="wcs" role="document">
+        
+            
+        
+        <div class="container-fluid">
+            <div class="page-header">
+              <h1>CrossOver Health</h1>
+            </div>
+        </div>
+        
+        <div class="container-fluid" role="main">
+    
+            <h3>Create New XO Follow Up Tracking Record</h3>
+            
+            <apex:form styleclass="form-horizontal" id="form">
+                <apex:pageMessages ></apex:pageMessages>
+                <apex:actionFunction name="save" action="{!save}"/>
+                <apex:actionFunction name="saveAndNew" action="{!saveAndNew}"/>
+                <apex:actionFunction name="cancel" action="{!Cancel}"/>
+                <apex:inputHidden value="{!PatientId}" id="patientId"/>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <div class="pull-right"><span class="label label-required" style="padding:1px;">&nbsp;</span> Required</div>
+                <h4 class="panel-title">Information</h4>
+              </div>
+              <div class="panel-body">
+              
+                <div class="row">
+                    <div class="col-md-6">
+    
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Patient Search</label>
+                            <div class="col-sm-8">
+                                <input type="text" id="patient_object" class="autocomplete form-control" placeholder="" />
+                                <p class="help-block" style="margin-bottom:0px">Enter + to add new record</p>
+                            </div>
+                        </div>
+                                              
+                        <hr/>
+                         
+                        <div class="patient-info-box" style="display:none;">
+                            <div class="form-group required">
+                                <label class="col-sm-4 control-label">Patient First Name</label>
+                                <div class="col-sm-8">
+                                  <apex:inputText styleclass="form-control requiredField" id="input_first_name" value="{!PatientCnt.firstname}"/>
+                                  <span class="errorInfo">This field is required.</span>
+                                </div>
+                            </div>
+                            <div class="form-group required">
+                                <label class="col-sm-4 control-label">Patient Last Name</label>
+                                <div class="col-sm-8">
+                                  <apex:inputText styleclass="form-control requiredField" id="input_last_name" value="{!PatientCnt.lastname}"/>
+                                  <span class="errorInfo">This field is required.</span>
+                                </div>
+                            </div>
+                            <div class="form-group required">
+                                <label class="col-sm-4 control-label">Patient DOB (mm/dd/yyyy)</label>
+                                <div class="col-sm-8">
+                                      <apex:inputText styleclass="form-control requiredField input-date theDatepicker" id="input_dob" value="{!DOB}"/>
+                                      <span class="errorInfo">This field is required.</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label">Lumeris ID</label>
+                                <div class="col-sm-8">
+                                  <apex:inputText styleclass="form-control" id="input_lumeris_id" value="{!PatientCnt.Lumeris_ID__c}"/>
+                                </div>
+                            </div>
+                            <div class="form-group required">
+                                <label class="col-sm-4 control-label">Patient Email</label>
+                                <div class="col-sm-8">
+                                  <apex:inputText styleclass="form-control requiredField" id="input_email"  value="{!PatientCnt.Email}"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label">Patient Phone Number</label>
+                                <div class="col-sm-8">
+                                  <apex:inputText styleclass="form-control" id="input_phone" value="{!PatientCnt.Phone}"/>
+
+                                </div>
+                            </div>
+                            <hr/>
+                        </div><!--/patient-info-box-->
+                          
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Follow Up Status</label>
+                            <div class="col-sm-8">
+                                <apex:inputField value="{!XOFollowUpTracking.Follow_Up_Status__c}" styleclass="form-control"/>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <label class="col-sm-4 control-label">Priority</label>
+                            <div class="col-sm-8">
+                                <apex:inputField value="{!XOFollowUpTracking.Priority__c}" styleclass="form-control"/>
+                                
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Screening Driven Follow-Up</label>
+                            <div class="col-sm-8">
+                                <div class="checkbox">
+                                  <label>
+                                    <apex:inputcheckbox value="{!XOFollowUpTracking.Screening_Driven_Follow_Up__c}"/>
+                                  </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">PREP Program?</label>
+                            <div class="col-sm-8">
+                                <div class="checkbox">
+                                  <label>
+                                    <apex:inputcheckbox value="{!XOFollowUpTracking.PREP__c}"/>
+                                  </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Allergy Patient?</label>
+                            <div class="col-sm-8">
+                                <div class="checkbox">
+                                  <label>
+                                    <apex:inputcheckbox value="{!XOFollowUpTracking.Allergy_Patient__c}"/>
+                                  </label>
+                                </div>
+                            </div>
+                        </div>
+                          
+                        <hr/>
+                          
+                        <div class="form-group required">
+                            <label class="col-sm-4 control-label">Referring Provider</label>
+                            <div class="col-sm-8">
+                                <apex:inputField value="{!XOFollowUpTracking.Referring_Provider__c}" styleclass="form-control requiredField"/>
+                                <span class="errorInfo">This field is required.</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Referral Status</label>
+                            <div class="col-sm-8">
+                                <apex:inputField value="{!XOFollowUpTracking.Referral_Status__c}" styleclass="form-control"/>
+                            </div>
+                        </div>
+                        <div class="form-group required">
+                            <label class="col-sm-4 control-label">Scheduled Follow Up Date</label>
+                            <div class="col-sm-8">
+                                <div class="input-group has-tip-right">
+                                  <apex:inputText value="{!ScheudleFollowUpDate}" styleclass="requiredField input-date form-control theDatepicker"/>
+                                  <span class="errorInfo">This field is required.</span>
+                                  <span class="input-group-addon input-date-picker">[mm/dd/yyyy]</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group required" style="display:{!IF(IsNewClinic, '', 'none')}">
+                            <label class="col-sm-4 control-label">Employer</label>
+                            <div class="col-sm-8">
+                                <apex:inputField value="{!XOFollowUpTracking.Employer__c}" styleclass="form-control requiredField" rendered="{!IsNewClinic}"/>
+                                <span class="errorInfo">This field is required.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                    
+                        <div class="form-group required">
+                            <label class="col-sm-4 control-label">Reason For Follow-Up</label>
+                            <div class="col-sm-8">
+                                <apex:inputField value="{!XOFollowUpTracking.Reason_For_Follow_Up__c}" styleclass="requiredField form-control"/>
+                                <span class="errorInfo">This field is required.</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Nurse Follow Up</label>
+                            <div class="col-sm-8 depentPicklist">
+                                    <apex:inputField value="{!XOFollowUpTracking.Nurse_Follow_Up__c}" styleclass="form-control"/>
+                                    <span class="errorInfo">This field is required.</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Internal Referral</label>
+                            <div class="col-sm-8 depentPicklist">
+                                    <apex:inputField value="{!XOFollowUpTracking.Ancillary_Care__c}" styleclass="form-control"/>
+                                    <span class="errorInfo">This field is required.</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Imaging</label>
+                            <div class="col-sm-8 depentPicklist">
+                                    <apex:inputField value="{!XOFollowUpTracking.Imaging__c}" styleclass="form-control"/>
+                                    <span class="errorInfo">This field is required.</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Reason for Imaging</label>
+                            <div class="col-sm-8">
+                              
+                              <apex:inputtextarea value="{!XOFollowUpTracking.Reason_for_Imaging__c}" styleclass="form-control"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Medical Specialty</label>
+                            <div class="col-sm-8 depentPicklist">
+                                    <apex:inputField value="{!XOFollowUpTracking.Medical_Specialty__c}" styleclass="form-control medicalSpec"/>
+                                    <span class="errorInfo">This field is required.</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Provider Name</label>
+                            <div class="col-sm-8 depentPicklist">                                    
+                                    <apex:inputField value="{!XOFollowUpTracking.Provider_Name__c}" styleclass="form-control providername" id="providername"/>
+                                    <span class="errorInfo">This field is required.</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Provider Name (if Other)</label>
+                            <div class="col-sm-8">
+                              <apex:inputField value="{!XOFollowUpTracking.Provider_Name_if_Other__c}" styleclass="form-control" id="providernameother"/>
+                              
+                           </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Provider Phone Number</label>
+                            <div class="col-sm-8">
+                              <apex:inputField value="{!XOFollowUpTracking.Provider_Phone_Number__c}" styleclass="form-control"/>
+                                
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Send Specialist Survey</label>
+                            <div class="col-sm-8">
+                                <div class="checkbox">
+                                  <label>
+                                    <apex:inputcheckbox value="{!XOFollowUpTracking.Send_Specialist_Survey__c}"/>
+                                  </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Notes</label>
+                            <div class="col-sm-8">
+                                <apex:inputTextarea rows="6" value="{!XOFollowUpTracking.Notes__c}" styleclass="form-control"/>
+                            </div>
+                        </div>
+                        <!--<div class="form-group required">
+                            <label class="col-sm-4 control-label">Record Type</label>
+                            <div class="col-sm-8">
+                              <apex:selectList size="1" value="{!XOFollowUpTracking.RecordTypeId}" styleclass="requiredField form-control">
+                                  <apex:selectOptions value="{!AllXOTrackRecordsTyes}"></apex:selectOptions>
+                              </apex:selectList>
+                              <span class="errorInfo">This field is required.</span>
+                            </div>
+                        </div>-->
+                    </div>
+                </div><!--/row-->
+              
+              </div>
+              <div class="panel-footer text-center">
+                <button type="button" class="btn btn-default" onclick="doSave();"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span> Save</button>
+                <button type="button" class="btn btn-default" onclick="doSaveAndNew();"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Save &amp; New</button>
+                <button type="button" class="btn btn-default" onclick="cancel();"><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span> Cancel</button>
+              </div>
+            </div><!--/panel-->
+            </apex:form>
+    
+    
+        </div> <!-- /container -->
+        
+        <div class="container-fluid">
+            <div class="page-footer">
+              &copy; CrossOver Health 2019
+            </div>
+        </div>
+    
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="{!URLFOR($Resource.CreatePatientANdXOFollow, 'assets/js/jquery.min.js')}"></script>
+          <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <script src="{!URLFOR($Resource.CreatePatientANdXOFollow, 'assets/bs/js/bootstrap.min.js')}"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="{!URLFOR($Resource.CreatePatientANdXOFollow, 'assets/js/ie10-viewport-bug-workaround.js')}"></script>
+        
+        <script type="text/javascript">
+            //To remove conflictions of jquery
+            var j$ = jQuery.noConflict();            
+            j$(document).ready(function() {
+                j$(".theDatepicker").datepicker();
+                //Auto complete textbox component
+                var autoCompleteTextBoxId = "input[id$='patient_object']";
+                var queryTerm;
+                //auto complete method
+                j$("#patient_object").autocomplete({
+                    minLength: 1,
+                    source: function(request, response) {
+                                queryTerm = request.term;
+                                var sObjects;
+                                var searchText = j$("#patient_object").val();
+                                SavePatientAndXOFollowController.searchPatient(searchText,function(result, event){
+                                    if(event.type == 'exception') {
+                                          alert(event.message);
+                                    } else {
+                                         sObjects = result;
+                                         response(sObjects);
+                                    }
+                                });
+                           },
+                           response: function(event, ui) {
+                            if (ui.content.length === 0) {
+                                j$(this).val('+ New Patient');
+                                j$("input[id$='patientId']").val();
+                                j$("input[id$='input_first_name']").val();
+                                j$("input[id$='input_last_name']").val();
+                                j$("input[id$='input_dob']").val();
+                                j$("input[id$='input_lumeris_id']").val();
+                                j$("input[id$='input_email']").val();
+                                j$("input[id$='input_phone']").val();
+                                j$('.patient-info-box').show();
+                            }
+                        },
+                    focus: function( event, ui ) {
+                            j$(autoCompleteTextBoxId).val( ui.item.Label );
+                            return false;
+                            },
+                    select: function( event, ui ) {
+                        j$(autoCompleteTextBoxId).val( ui.item.Label );
+                        j$("input[id$='patientId']").val(ui.item.Id);
+                        j$("input[id$='input_first_name']").val(ui.item.Firstname);
+                        j$("input[id$='input_last_name']").val(ui.item.Lastname);
+                        j$("input[id$='input_dob']").val(ui.item.DOB);
+                        j$("input[id$='input_lumeris_id']").val(ui.item.lumerisid);
+                        j$("input[id$='input_email']").val(ui.item.Email);
+                        j$("input[id$='input_phone']").val(ui.item.Phone);
+                        
+                        j$('.patient-info-box').show();
+                    },
+                 })
+                 .data( "uiAutocomplete" )._renderItem = function( ul, item ) {
+                    var entry = "<a><b>" + item.Label + "</b> " + item.DOB ;
+                    entry = entry + "</a>";
+                    entry = entry.replace(queryTerm, "<b>" + queryTerm + "</b>");
+                    return j$( "<li></li>" )
+                        .data( "item.autocomplete", item )
+                        .append( entry )
+                        .appendTo( ul );
+                };
+            }); 
+            
+            function validateForm()
+            {
+                var validateresult = true;
+                j$(".requiredField").each(function(){
+                    if(j$(this).val() == "")
+                    {
+                        validateresult = false;
+                        j$(this).next().show();
+                    }
+                    else
+                    {
+                        j$(this).next().hide();
+                    }
+                  });
+                  j$(".depentPicklist select").each(function(){
+                    if(!j$(this).is('[disabled=""]') && j$(this).val() == "")
+                    {
+                        validateresult = false;
+                        j$(this).parent().parent().find(".errorInfo").show();
+                    }
+                    else
+                    {
+                        j$(this).parent().parent().find(".errorInfo").hide();
+                    }
+                  })   
+                  return validateresult;
+            }
+                  
+            
+            function doSave()
+            {
+                if(validateForm())
+                {
+                    save();
+                }
+            } 
+            
+            function doSaveAndNew()
+            {
+                if(validateForm())
+                {
+                    saveAndNew();
+                }
+            } 
+            
+            function setPicklistStyle()
+            {
+                j$("select").each(function(){alert(j$(this).attr('id'));
+                    if(!j$(this).hasClass("form-control"))
+                    {
+                        j$(this).addClass("form-control");
+                    }                   
+                  });
+            }                    
+        </script>
+        
+      </body>
+    </html>
+</apex:page>
